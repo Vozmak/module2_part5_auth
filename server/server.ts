@@ -9,7 +9,11 @@ import { authorizationChecker } from './middleware/authorizationChecker';
 import loginRouter from './routes/loginRouter';
 import displayGalleryRouter from './routes/displayGalleryRouter';
 import addImgRouter from './routes/addImgRouter';
+import { connectDb } from './mongoDB/mongoDbConnect';
 
+connectDb().catch(e => {
+  console.log(e);
+});
 const app = express();
 const PORT: number = 2000;
 const hostname: string = '127.0.0.1';

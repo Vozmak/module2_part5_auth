@@ -1,8 +1,5 @@
 import {Request} from "express";
-
-interface UsersAssecc {
-    [email: string]: string;
-}
+import { Users } from '../mongoDB/Models/Users';
 
 type LoginResponse = {
     errorMessage: string;
@@ -15,14 +12,9 @@ interface User {
     password: string;
 }
 
-const usersAccess: UsersAssecc = {
-    "asergeev@flo.team": "jgF5tn4F",
-    "vkotikov@flo.team": "po3FGas8",
-    "tpupkin@flo.team": "tpupkin@flo.team",
-}
-
-function login(req: Request): LoginResponse {
+async function login(req: Request): Promise<LoginResponse> {
     const user: User = req.body;
+    const findUser: User = await Users.findOne(user);
 
     if (!userValidation(user)) {
         return {
@@ -30,7 +22,7 @@ function login(req: Request): LoginResponse {
         }
     }
 
-    if (!usersAccess.hasOwnProperty(user.email) || user.password !== usersAccess[user.email]) {
+    if (!findUser) {
         return {
             errorMessage: "Неверный логин или пароль"
         }

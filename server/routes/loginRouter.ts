@@ -4,8 +4,8 @@ import { errorMessage } from '../function/errorMessageCheck';
 import * as express from 'express';
 const router = express.Router();
 
-router.post('/authorization', (req: Request, res: Response) => {
-  const resBody = login(req);
+router.post('/authorization', async (req: Request, res: Response) => {
+  const resBody = await login(req);
 
   errorMessage(res, resBody, 406);
 
