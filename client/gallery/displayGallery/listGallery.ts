@@ -62,7 +62,7 @@ async function displayImgList(): Promise<void> {
   const jsonImgList = await imgList.json();
   for (let img of jsonImgList.objects) {
     let newImg = document.createElement("img") as HTMLImageElement;
-    newImg.src = img;
+    newImg.src = new URL(img).toString();
     gallery.insertAdjacentElement("beforeend", newImg);
   }
 

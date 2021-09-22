@@ -24,7 +24,7 @@ async function displayGallery(req: Request): Promise<LoginResponse> {
   }
 
   const imgArray = await readdir(`server/gallery/images/${page}`);
-  const images = imgArray.map((img: string) => path.join(`/server/gallery/images/${page}`, img));
+  const images = imgArray.map((img: string) => path.join(`http://${req.headers.host}/images/${page}`, img));
 
   return {
     objects: images,

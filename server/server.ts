@@ -17,17 +17,18 @@ const swaggerDocument = YAML.load(`server/swagger/swaggerAPI.yaml`);
 
 app.use(cors({
   origin: '*',
+  credentials: true,
 }));
 app.use(express.json());
 app.all('*', authorizationChecker);
 app.use(logger);
-app.use(express.static(`server/gallery/images`));
+app.use('/images', express.static(`server/gallery/images`));
 app.use(fileUpload());
 app.use('/api-docs', swaggerUi.serve, swaggerUi.setup(swaggerDocument));
 
-app.use('/authorization', loginRouter);
-app.use('/gallery/:page', displayGalleryRouter);
-app.use('/gallery/:page', addImgRouter);
+app.use('/', loginRouter);
+app.use('/', displayGalleryRouter);
+app.use('/', addImgRouter);
 
 app.all('*', (req: Request, res: Response, next: NextFunction) => {
   res.writeHead(404);
