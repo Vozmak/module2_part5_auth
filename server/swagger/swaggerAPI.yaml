@@ -1,0 +1,159 @@
+swagger: "2.0"
+info:
+  description: "Данный сайт предоставляет все существующие запросы на сервет. Здесь их можно опробовать и протестировать"
+  version: "3.0.1"
+  title: "Swagger Express Gallery Project"
+host: "127.0.0.1:2000"
+tags:
+  - name: "authorization"
+    description: "login"
+  - name: "gallery"
+    description: "All about gallery"
+schemes:
+  - "http"
+  - "https"
+paths:
+  /authorization:
+    get:
+      tags:
+        - "authorization"
+      summary: "Display authorization site"
+      description: ""
+      operationId: "getLoginPage"
+      produces:
+        - "application/text"
+      parameters: [ ]
+      responses:
+        "200":
+        description: "successful operation"
+    post:
+      tags:
+        - "authorization"
+      summary: "Try too authorization"
+      description: ""
+      operationId: "login"
+      consumes:
+        - "application/json"
+      produces:
+        - "application/json"
+      parameters:
+        - in: "body"
+          name: "body"
+          description: "User object"
+          required: true
+          schema:
+            type: "object"
+            required:
+              - "email"
+              - "password"
+            properties:
+              email:
+                type: "string"
+                example: "testemail@flo.com"
+              password:
+                type: "string"
+                example: "FlO241Ki9u"
+      responses:
+        "200":
+          description: "successful operation"
+          schema:
+            type: "object"
+            properties:
+              token:
+                type: "string"
+                example: "token"
+        "406":
+          description: "Incorrect user or password"
+          schema:
+            type: "object"
+            properties:
+              errorMessage:
+                type: "string"
+                example: "Неверное имя пользователя или пароль"
+  /gallery/{page}:
+    get:
+      tags:
+        - gallery
+      summary: "Get image for gallery"
+      description: ""
+      operationId: "getImagesByPage"
+      produces:
+        - "application/json"
+      parameters:
+        - in: "header"
+          name: "Authorization"
+          required: "true"
+          type: "string"
+          schema:
+            type: "string"
+            example: "token"
+        - name: "page"
+          in: "path"
+          description: "Page gallery"
+          type: "integer"
+          format: "int64"
+      responses:
+        "200":
+          description: "successful operation"
+          schema:
+            type: "object"
+            properties:
+              objects:
+                type: "array"
+                example: [ "path/to/img.jpg" ]
+              page:
+                type: string
+                example: "1"
+              total:
+                type: integer
+                example: "3"
+        "404":
+          description: "page not found"
+    post:
+      tags:
+        - gallery
+      summary: "Upload image(s)"
+      description: ""
+      operationId: "Upload image on page"
+      consumes:
+        - "multipart/form-data"
+      produces:
+        - "application/json"
+      parameters:
+        - in: "header"
+          name: "Authorization"
+          required: "true"
+          type: "string"
+          schema:
+            type: "string"
+            example: "token"
+        - name: "page"
+          in: "path"
+          description: "Page gallery"
+          type: "integer"
+          format: "int64"
+        - in: "formData"
+          name: "photo"
+          description: "FormData images"
+          required: true
+          type: "file"
+      responses:
+        "200":
+          description: "successful operation"
+          schema:
+            type: "object"
+            properties:
+              message:
+                type: "string"
+                example: "Изображения успешно загружены"
+              objects:
+                type: "array"
+                example: ['142356.png']
+        "400":
+          description: "Incorrect images"
+          schema:
+            type: "object"
+            properties:
+              errorMessage:
+                type: "string"
+                example: "Нет изображений для загрузки"

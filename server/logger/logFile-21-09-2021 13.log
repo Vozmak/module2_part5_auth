@@ -1,0 +1,223 @@
+21-09-2021 13:00:06.882 INFO  Ответ сервера: Server start 
+21-09-2021 13:00:18.224 INFO  Ответ сервера: Server start 
+21-09-2021 13:00:31.784 INFO  Ответ сервера: Server start 
+21-09-2021 13:02:19.805 INFO  Ответ сервера: Server start 
+21-09-2021 13:04:33.924 INFO  Ответ сервера: Server start 
+21-09-2021 13:04:39.201 INFO  Запрос на сервер: Method - GET; 
+        URL - /gallery/2; 
+        Body - {}; 
+        Headers - {"host":"127.0.0.1:2000","connection":"keep-alive","sec-ch-ua":"\"Google Chrome\";v=\"93\", \" Not;A Brand\";v=\"99\", \"Chromium\";v=\"93\"","authorization":"undefined","sec-ch-ua-mobile":"?0","user-agent":"Mozilla/5.0 (Macintosh; Intel Mac OS X 10_15_7) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/93.0.4577.82 Safari/537.36","sec-ch-ua-platform":"\"macOS\"","accept":"*/*","origin":"http://localhost:63342","sec-fetch-site":"cross-site","sec-fetch-mode":"cors","sec-fetch-dest":"empty","referer":"http://localhost:63342/","accept-encoding":"gzip, deflate, br","accept-language":"en-GB,en-US;q=0.9,en;q=0.8"} 
+21-09-2021 13:04:45.622 INFO  Запрос на сервер: Method - POST; 
+        URL - /authorization; 
+        Body - {"email":"asergeev@flo.team","password":"jgF5tn4F"}; 
+        Headers - {"host":"127.0.0.1:2000","connection":"keep-alive","content-length":"51","sec-ch-ua":"\"Google Chrome\";v=\"93\", \" Not;A Brand\";v=\"99\", \"Chromium\";v=\"93\"","sec-ch-ua-mobile":"?0","user-agent":"Mozilla/5.0 (Macintosh; Intel Mac OS X 10_15_7) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/93.0.4577.82 Safari/537.36","sec-ch-ua-platform":"\"macOS\"","content-type":"application/json","accept":"*/*","origin":"http://localhost:63342","sec-fetch-site":"cross-site","sec-fetch-mode":"cors","sec-fetch-dest":"empty","referer":"http://localhost:63342/","accept-encoding":"gzip, deflate, br","accept-language":"en-GB,en-US;q=0.9,en;q=0.8"} 
+21-09-2021 13:06:45.637 INFO  Запрос на сервер: Method - POST; 
+        URL - /authorization; 
+        Body - {"email":"asergeev@flo.team","password":"jgF5tn4F"}; 
+        Headers - {"host":"127.0.0.1:2000","connection":"keep-alive","content-length":"51","sec-ch-ua":"\"Google Chrome\";v=\"93\", \" Not;A Brand\";v=\"99\", \"Chromium\";v=\"93\"","sec-ch-ua-mobile":"?0","user-agent":"Mozilla/5.0 (Macintosh; Intel Mac OS X 10_15_7) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/93.0.4577.82 Safari/537.36","sec-ch-ua-platform":"\"macOS\"","content-type":"application/json","accept":"*/*","origin":"http://localhost:63342","sec-fetch-site":"cross-site","sec-fetch-mode":"cors","sec-fetch-dest":"empty","referer":"http://localhost:63342/","accept-encoding":"gzip, deflate, br","accept-language":"en-GB,en-US;q=0.9,en;q=0.8"} 
+21-09-2021 13:11:06.873 INFO  Ответ сервера: Server start 
+21-09-2021 13:11:15.204 INFO  Запрос на сервер: Method - POST; 
+        URL - /authorization; 
+        Body - {"email":"asergeev@flo.team","password":"jgF5tn4F"}; 
+        Headers - {"host":"127.0.0.1:2000","connection":"keep-alive","content-length":"51","sec-ch-ua":"\"Google Chrome\";v=\"93\", \" Not;A Brand\";v=\"99\", \"Chromium\";v=\"93\"","sec-ch-ua-mobile":"?0","user-agent":"Mozilla/5.0 (Macintosh; Intel Mac OS X 10_15_7) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/93.0.4577.82 Safari/537.36","sec-ch-ua-platform":"\"macOS\"","content-type":"application/json","accept":"*/*","origin":"http://localhost:63342","sec-fetch-site":"cross-site","sec-fetch-mode":"cors","sec-fetch-dest":"empty","referer":"http://localhost:63342/","accept-encoding":"gzip, deflate, br","accept-language":"en-GB,en-US;q=0.9,en;q=0.8"} 
+21-09-2021 13:11:15.205 INFO  Ответ сервера: {"token":"token"} 
+21-09-2021 13:11:15.456 INFO  Запрос на сервер: Method - GET; 
+        URL - /gallery/3; 
+        Body - {}; 
+        Headers - {"host":"127.0.0.1:2000","connection":"keep-alive","sec-ch-ua":"\"Google Chrome\";v=\"93\", \" Not;A Brand\";v=\"99\", \"Chromium\";v=\"93\"","authorization":"token","sec-ch-ua-mobile":"?0","user-agent":"Mozilla/5.0 (Macintosh; Intel Mac OS X 10_15_7) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/93.0.4577.82 Safari/537.36","sec-ch-ua-platform":"\"macOS\"","accept":"*/*","origin":"http://localhost:63342","sec-fetch-site":"cross-site","sec-fetch-mode":"cors","sec-fetch-dest":"empty","referer":"http://localhost:63342/","accept-encoding":"gzip, deflate, br","accept-language":"en-GB,en-US;q=0.9,en;q=0.8"} 
+21-09-2021 13:11:15.468 INFO  Ответ сервера: {"objects":["../../server/gallery/images/3/1565a95fb25c7744777b506ce76cc3f0e6-21-gaben.jpg","../../server/gallery/images/3/505616.png","../../server/gallery/images/3/632079.png","../../server/gallery/images/3/835097.jpg"],"page":"3","total":3} 
+21-09-2021 13:11:16.980 INFO  Запрос на сервер: Method - GET; 
+        URL - /gallery/2; 
+        Body - {}; 
+        Headers - {"host":"127.0.0.1:2000","connection":"keep-alive","sec-ch-ua":"\"Google Chrome\";v=\"93\", \" Not;A Brand\";v=\"99\", \"Chromium\";v=\"93\"","authorization":"token","sec-ch-ua-mobile":"?0","user-agent":"Mozilla/5.0 (Macintosh; Intel Mac OS X 10_15_7) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/93.0.4577.82 Safari/537.36","sec-ch-ua-platform":"\"macOS\"","accept":"*/*","origin":"http://localhost:63342","sec-fetch-site":"cross-site","sec-fetch-mode":"cors","sec-fetch-dest":"empty","referer":"http://localhost:63342/","accept-encoding":"gzip, deflate, br","accept-language":"en-GB,en-US;q=0.9,en;q=0.8"} 
+21-09-2021 13:11:16.981 INFO  Ответ сервера: {"objects":["../../server/gallery/images/2/128706.png","../../server/gallery/images/2/162661f650c2d06a3fa072a9a97ab236.jpg","../../server/gallery/images/2/415519.jpg","../../server/gallery/images/2/640956.jpg","../../server/gallery/images/2/934905.jpg"],"page":"2","total":3} 
+21-09-2021 13:11:47.851 INFO  Запрос на сервер: Method - GET; 
+        URL - /; 
+        Body - {}; 
+        Headers - {"host":"127.0.0.1:2000","connection":"keep-alive","sec-ch-ua":"\"Google Chrome\";v=\"93\", \" Not;A Brand\";v=\"99\", \"Chromium\";v=\"93\"","sec-ch-ua-mobile":"?0","sec-ch-ua-platform":"\"macOS\"","upgrade-insecure-requests":"1","user-agent":"Mozilla/5.0 (Macintosh; Intel Mac OS X 10_15_7) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/93.0.4577.82 Safari/537.36","accept":"text/html,application/xhtml+xml,application/xml;q=0.9,image/avif,image/webp,image/apng,*/*;q=0.8,application/signed-exchange;v=b3;q=0.9","sec-fetch-site":"none","sec-fetch-mode":"navigate","sec-fetch-user":"?1","sec-fetch-dest":"document","accept-encoding":"gzip, deflate, br","accept-language":"en-GB,en-US;q=0.9,en;q=0.8"} 
+21-09-2021 13:11:55.390 INFO  Запрос на сервер: Method - GET; 
+        URL - /123; 
+        Body - {}; 
+        Headers - {"host":"127.0.0.1:2000","connection":"keep-alive","sec-ch-ua":"\"Google Chrome\";v=\"93\", \" Not;A Brand\";v=\"99\", \"Chromium\";v=\"93\"","sec-ch-ua-mobile":"?0","sec-ch-ua-platform":"\"macOS\"","upgrade-insecure-requests":"1","user-agent":"Mozilla/5.0 (Macintosh; Intel Mac OS X 10_15_7) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/93.0.4577.82 Safari/537.36","accept":"text/html,application/xhtml+xml,application/xml;q=0.9,image/avif,image/webp,image/apng,*/*;q=0.8,application/signed-exchange;v=b3;q=0.9","sec-fetch-site":"none","sec-fetch-mode":"navigate","sec-fetch-user":"?1","sec-fetch-dest":"document","accept-encoding":"gzip, deflate, br","accept-language":"en-GB,en-US;q=0.9,en;q=0.8"} 
+21-09-2021 13:12:03.697 INFO  Запрос на сервер: Method - GET; 
+        URL - /123/32132; 
+        Body - {}; 
+        Headers - {"host":"127.0.0.1:2000","connection":"keep-alive","sec-ch-ua":"\"Google Chrome\";v=\"93\", \" Not;A Brand\";v=\"99\", \"Chromium\";v=\"93\"","sec-ch-ua-mobile":"?0","sec-ch-ua-platform":"\"macOS\"","upgrade-insecure-requests":"1","user-agent":"Mozilla/5.0 (Macintosh; Intel Mac OS X 10_15_7) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/93.0.4577.82 Safari/537.36","accept":"text/html,application/xhtml+xml,application/xml;q=0.9,image/avif,image/webp,image/apng,*/*;q=0.8,application/signed-exchange;v=b3;q=0.9","sec-fetch-site":"none","sec-fetch-mode":"navigate","sec-fetch-user":"?1","sec-fetch-dest":"document","accept-encoding":"gzip, deflate, br","accept-language":"en-GB,en-US;q=0.9,en;q=0.8"} 
+21-09-2021 13:12:22.925 INFO  Ответ сервера: Server start 
+21-09-2021 13:12:23.092 INFO  Запрос на сервер: Method - GET; 
+        URL - /123/32132; 
+        Body - {}; 
+        Headers - {"host":"127.0.0.1:2000","connection":"keep-alive","cache-control":"max-age=0","sec-ch-ua":"\"Google Chrome\";v=\"93\", \" Not;A Brand\";v=\"99\", \"Chromium\";v=\"93\"","sec-ch-ua-mobile":"?0","sec-ch-ua-platform":"\"macOS\"","upgrade-insecure-requests":"1","user-agent":"Mozilla/5.0 (Macintosh; Intel Mac OS X 10_15_7) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/93.0.4577.82 Safari/537.36","accept":"text/html,application/xhtml+xml,application/xml;q=0.9,image/avif,image/webp,image/apng,*/*;q=0.8,application/signed-exchange;v=b3;q=0.9","sec-fetch-site":"none","sec-fetch-mode":"navigate","sec-fetch-user":"?1","sec-fetch-dest":"document","accept-encoding":"gzip, deflate, br","accept-language":"en-GB,en-US;q=0.9,en;q=0.8"} 
+21-09-2021 13:12:30.993 INFO  Запрос на сервер: Method - GET; 
+        URL - /gallery/2; 
+        Body - {}; 
+        Headers - {"host":"127.0.0.1:2000","connection":"keep-alive","sec-ch-ua":"\"Google Chrome\";v=\"93\", \" Not;A Brand\";v=\"99\", \"Chromium\";v=\"93\"","authorization":"token","sec-ch-ua-mobile":"?0","user-agent":"Mozilla/5.0 (Macintosh; Intel Mac OS X 10_15_7) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/93.0.4577.82 Safari/537.36","sec-ch-ua-platform":"\"macOS\"","accept":"*/*","origin":"http://localhost:63342","sec-fetch-site":"cross-site","sec-fetch-mode":"cors","sec-fetch-dest":"empty","referer":"http://localhost:63342/","accept-encoding":"gzip, deflate, br","accept-language":"en-GB,en-US;q=0.9,en;q=0.8"} 
+21-09-2021 13:12:31.001 INFO  Ответ сервера: {"objects":["../../server/gallery/images/2/128706.png","../../server/gallery/images/2/162661f650c2d06a3fa072a9a97ab236.jpg","../../server/gallery/images/2/415519.jpg","../../server/gallery/images/2/640956.jpg","../../server/gallery/images/2/934905.jpg"],"page":"2","total":3} 
+21-09-2021 13:12:34.967 INFO  Запрос на сервер: Method - GET; 
+        URL - /123/32132; 
+        Body - {}; 
+        Headers - {"host":"127.0.0.1:2000","connection":"keep-alive","cache-control":"max-age=0","sec-ch-ua":"\"Google Chrome\";v=\"93\", \" Not;A Brand\";v=\"99\", \"Chromium\";v=\"93\"","sec-ch-ua-mobile":"?0","sec-ch-ua-platform":"\"macOS\"","upgrade-insecure-requests":"1","user-agent":"Mozilla/5.0 (Macintosh; Intel Mac OS X 10_15_7) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/93.0.4577.82 Safari/537.36","accept":"text/html,application/xhtml+xml,application/xml;q=0.9,image/avif,image/webp,image/apng,*/*;q=0.8,application/signed-exchange;v=b3;q=0.9","sec-fetch-site":"none","sec-fetch-mode":"navigate","sec-fetch-user":"?1","sec-fetch-dest":"document","accept-encoding":"gzip, deflate, br","accept-language":"en-GB,en-US;q=0.9,en;q=0.8"} 
+21-09-2021 13:13:53.562 INFO  Ответ сервера: Server start 
+21-09-2021 13:13:53.678 INFO  Запрос на сервер: Method - GET; 
+        URL - /123/32132; 
+        Body - {}; 
+        Headers - {"host":"127.0.0.1:2000","connection":"keep-alive","cache-control":"max-age=0","sec-ch-ua":"\"Google Chrome\";v=\"93\", \" Not;A Brand\";v=\"99\", \"Chromium\";v=\"93\"","sec-ch-ua-mobile":"?0","sec-ch-ua-platform":"\"macOS\"","upgrade-insecure-requests":"1","user-agent":"Mozilla/5.0 (Macintosh; Intel Mac OS X 10_15_7) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/93.0.4577.82 Safari/537.36","accept":"text/html,application/xhtml+xml,application/xml;q=0.9,image/avif,image/webp,image/apng,*/*;q=0.8,application/signed-exchange;v=b3;q=0.9","sec-fetch-site":"none","sec-fetch-mode":"navigate","sec-fetch-user":"?1","sec-fetch-dest":"document","accept-encoding":"gzip, deflate, br","accept-language":"en-GB,en-US;q=0.9,en;q=0.8"} 
+21-09-2021 13:13:54.949 INFO  Запрос на сервер: Method - GET; 
+        URL - /123/32132; 
+        Body - {}; 
+        Headers - {"host":"127.0.0.1:2000","connection":"keep-alive","cache-control":"max-age=0","sec-ch-ua":"\"Google Chrome\";v=\"93\", \" Not;A Brand\";v=\"99\", \"Chromium\";v=\"93\"","sec-ch-ua-mobile":"?0","sec-ch-ua-platform":"\"macOS\"","upgrade-insecure-requests":"1","user-agent":"Mozilla/5.0 (Macintosh; Intel Mac OS X 10_15_7) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/93.0.4577.82 Safari/537.36","accept":"text/html,application/xhtml+xml,application/xml;q=0.9,image/avif,image/webp,image/apng,*/*;q=0.8,application/signed-exchange;v=b3;q=0.9","sec-fetch-site":"none","sec-fetch-mode":"navigate","sec-fetch-user":"?1","sec-fetch-dest":"document","accept-encoding":"gzip, deflate, br","accept-language":"en-GB,en-US;q=0.9,en;q=0.8"} 
+21-09-2021 13:13:54.961 INFO  Запрос на сервер: Method - GET; 
+        URL - /123/32132; 
+        Body - {}; 
+        Headers - {"host":"127.0.0.1:2000","connection":"keep-alive","cache-control":"max-age=0","sec-ch-ua":"\"Google Chrome\";v=\"93\", \" Not;A Brand\";v=\"99\", \"Chromium\";v=\"93\"","sec-ch-ua-mobile":"?0","sec-ch-ua-platform":"\"macOS\"","upgrade-insecure-requests":"1","user-agent":"Mozilla/5.0 (Macintosh; Intel Mac OS X 10_15_7) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/93.0.4577.82 Safari/537.36","accept":"text/html,application/xhtml+xml,application/xml;q=0.9,image/avif,image/webp,image/apng,*/*;q=0.8,application/signed-exchange;v=b3;q=0.9","sec-fetch-site":"none","sec-fetch-mode":"navigate","sec-fetch-user":"?1","sec-fetch-dest":"document","accept-encoding":"gzip, deflate, br","accept-language":"en-GB,en-US;q=0.9,en;q=0.8"} 
+21-09-2021 13:13:55.015 INFO  Запрос на сервер: Method - GET; 
+        URL - /123/32132; 
+        Body - {}; 
+        Headers - {"host":"127.0.0.1:2000","connection":"keep-alive","cache-control":"max-age=0","sec-ch-ua":"\"Google Chrome\";v=\"93\", \" Not;A Brand\";v=\"99\", \"Chromium\";v=\"93\"","sec-ch-ua-mobile":"?0","sec-ch-ua-platform":"\"macOS\"","upgrade-insecure-requests":"1","user-agent":"Mozilla/5.0 (Macintosh; Intel Mac OS X 10_15_7) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/93.0.4577.82 Safari/537.36","accept":"text/html,application/xhtml+xml,application/xml;q=0.9,image/avif,image/webp,image/apng,*/*;q=0.8,application/signed-exchange;v=b3;q=0.9","sec-fetch-site":"none","sec-fetch-mode":"navigate","sec-fetch-user":"?1","sec-fetch-dest":"document","accept-encoding":"gzip, deflate, br","accept-language":"en-GB,en-US;q=0.9,en;q=0.8"} 
+21-09-2021 13:14:00.079 INFO  Запрос на сервер: Method - GET; 
+        URL - /123/32132; 
+        Body - {}; 
+        Headers - {"host":"127.0.0.1:2000","connection":"keep-alive","cache-control":"max-age=0","sec-ch-ua":"\"Google Chrome\";v=\"93\", \" Not;A Brand\";v=\"99\", \"Chromium\";v=\"93\"","sec-ch-ua-mobile":"?0","sec-ch-ua-platform":"\"macOS\"","upgrade-insecure-requests":"1","user-agent":"Mozilla/5.0 (Macintosh; Intel Mac OS X 10_15_7) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/93.0.4577.82 Safari/537.36","accept":"text/html,application/xhtml+xml,application/xml;q=0.9,image/avif,image/webp,image/apng,*/*;q=0.8,application/signed-exchange;v=b3;q=0.9","sec-fetch-site":"none","sec-fetch-mode":"navigate","sec-fetch-user":"?1","sec-fetch-dest":"document","accept-encoding":"gzip, deflate, br","accept-language":"en-GB,en-US;q=0.9,en;q=0.8"} 
+21-09-2021 13:14:00.084 INFO  Запрос на сервер: Method - GET; 
+        URL - /123/32132; 
+        Body - {}; 
+        Headers - {"host":"127.0.0.1:2000","connection":"keep-alive","cache-control":"max-age=0","sec-ch-ua":"\"Google Chrome\";v=\"93\", \" Not;A Brand\";v=\"99\", \"Chromium\";v=\"93\"","sec-ch-ua-mobile":"?0","sec-ch-ua-platform":"\"macOS\"","upgrade-insecure-requests":"1","user-agent":"Mozilla/5.0 (Macintosh; Intel Mac OS X 10_15_7) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/93.0.4577.82 Safari/537.36","accept":"text/html,application/xhtml+xml,application/xml;q=0.9,image/avif,image/webp,image/apng,*/*;q=0.8,application/signed-exchange;v=b3;q=0.9","sec-fetch-site":"none","sec-fetch-mode":"navigate","sec-fetch-user":"?1","sec-fetch-dest":"document","accept-encoding":"gzip, deflate, br","accept-language":"en-GB,en-US;q=0.9,en;q=0.8"} 
+21-09-2021 13:14:00.090 INFO  Запрос на сервер: Method - GET; 
+        URL - /123/32132; 
+        Body - {}; 
+        Headers - {"host":"127.0.0.1:2000","connection":"keep-alive","cache-control":"max-age=0","sec-ch-ua":"\"Google Chrome\";v=\"93\", \" Not;A Brand\";v=\"99\", \"Chromium\";v=\"93\"","sec-ch-ua-mobile":"?0","sec-ch-ua-platform":"\"macOS\"","upgrade-insecure-requests":"1","user-agent":"Mozilla/5.0 (Macintosh; Intel Mac OS X 10_15_7) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/93.0.4577.82 Safari/537.36","accept":"text/html,application/xhtml+xml,application/xml;q=0.9,image/avif,image/webp,image/apng,*/*;q=0.8,application/signed-exchange;v=b3;q=0.9","sec-fetch-site":"none","sec-fetch-mode":"navigate","sec-fetch-user":"?1","sec-fetch-dest":"document","accept-encoding":"gzip, deflate, br","accept-language":"en-GB,en-US;q=0.9,en;q=0.8"} 
+21-09-2021 13:14:12.371 INFO  Запрос на сервер: Method - GET; 
+        URL - /123/32132; 
+        Body - {}; 
+        Headers - {"host":"127.0.0.1:2000","connection":"keep-alive","cache-control":"max-age=0","sec-ch-ua":"\"Google Chrome\";v=\"93\", \" Not;A Brand\";v=\"99\", \"Chromium\";v=\"93\"","sec-ch-ua-mobile":"?0","sec-ch-ua-platform":"\"macOS\"","upgrade-insecure-requests":"1","user-agent":"Mozilla/5.0 (Macintosh; Intel Mac OS X 10_15_7) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/93.0.4577.82 Safari/537.36","accept":"text/html,application/xhtml+xml,application/xml;q=0.9,image/avif,image/webp,image/apng,*/*;q=0.8,application/signed-exchange;v=b3;q=0.9","sec-fetch-site":"none","sec-fetch-mode":"navigate","sec-fetch-user":"?1","sec-fetch-dest":"document","accept-encoding":"gzip, deflate, br","accept-language":"en-GB,en-US;q=0.9,en;q=0.8"} 
+21-09-2021 13:14:13.310 INFO  Запрос на сервер: Method - GET; 
+        URL - /123/32132; 
+        Body - {}; 
+        Headers - {"host":"127.0.0.1:2000","connection":"keep-alive","cache-control":"max-age=0","sec-ch-ua":"\"Google Chrome\";v=\"93\", \" Not;A Brand\";v=\"99\", \"Chromium\";v=\"93\"","sec-ch-ua-mobile":"?0","sec-ch-ua-platform":"\"macOS\"","upgrade-insecure-requests":"1","user-agent":"Mozilla/5.0 (Macintosh; Intel Mac OS X 10_15_7) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/93.0.4577.82 Safari/537.36","accept":"text/html,application/xhtml+xml,application/xml;q=0.9,image/avif,image/webp,image/apng,*/*;q=0.8,application/signed-exchange;v=b3;q=0.9","sec-fetch-site":"none","sec-fetch-mode":"navigate","sec-fetch-user":"?1","sec-fetch-dest":"document","accept-encoding":"gzip, deflate, br","accept-language":"en-GB,en-US;q=0.9,en;q=0.8"} 
+21-09-2021 13:14:13.313 INFO  Запрос на сервер: Method - GET; 
+        URL - /123/32132; 
+        Body - {}; 
+        Headers - {"host":"127.0.0.1:2000","connection":"keep-alive","cache-control":"max-age=0","sec-ch-ua":"\"Google Chrome\";v=\"93\", \" Not;A Brand\";v=\"99\", \"Chromium\";v=\"93\"","sec-ch-ua-mobile":"?0","sec-ch-ua-platform":"\"macOS\"","upgrade-insecure-requests":"1","user-agent":"Mozilla/5.0 (Macintosh; Intel Mac OS X 10_15_7) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/93.0.4577.82 Safari/537.36","accept":"text/html,application/xhtml+xml,application/xml;q=0.9,image/avif,image/webp,image/apng,*/*;q=0.8,application/signed-exchange;v=b3;q=0.9","sec-fetch-site":"none","sec-fetch-mode":"navigate","sec-fetch-user":"?1","sec-fetch-dest":"document","accept-encoding":"gzip, deflate, br","accept-language":"en-GB,en-US;q=0.9,en;q=0.8"} 
+21-09-2021 13:14:13.325 INFO  Запрос на сервер: Method - GET; 
+        URL - /123/32132; 
+        Body - {}; 
+        Headers - {"host":"127.0.0.1:2000","connection":"keep-alive","cache-control":"max-age=0","sec-ch-ua":"\"Google Chrome\";v=\"93\", \" Not;A Brand\";v=\"99\", \"Chromium\";v=\"93\"","sec-ch-ua-mobile":"?0","sec-ch-ua-platform":"\"macOS\"","upgrade-insecure-requests":"1","user-agent":"Mozilla/5.0 (Macintosh; Intel Mac OS X 10_15_7) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/93.0.4577.82 Safari/537.36","accept":"text/html,application/xhtml+xml,application/xml;q=0.9,image/avif,image/webp,image/apng,*/*;q=0.8,application/signed-exchange;v=b3;q=0.9","sec-fetch-site":"none","sec-fetch-mode":"navigate","sec-fetch-user":"?1","sec-fetch-dest":"document","accept-encoding":"gzip, deflate, br","accept-language":"en-GB,en-US;q=0.9,en;q=0.8"} 
+21-09-2021 13:14:25.196 INFO  Ответ сервера: Server start 
+21-09-2021 13:14:28.100 INFO  Запрос на сервер: Method - GET; 
+        URL - /123/32132; 
+        Body - {}; 
+        Headers - {"host":"127.0.0.1:2000","connection":"keep-alive","cache-control":"max-age=0","sec-ch-ua":"\"Google Chrome\";v=\"93\", \" Not;A Brand\";v=\"99\", \"Chromium\";v=\"93\"","sec-ch-ua-mobile":"?0","sec-ch-ua-platform":"\"macOS\"","upgrade-insecure-requests":"1","user-agent":"Mozilla/5.0 (Macintosh; Intel Mac OS X 10_15_7) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/93.0.4577.82 Safari/537.36","accept":"text/html,application/xhtml+xml,application/xml;q=0.9,image/avif,image/webp,image/apng,*/*;q=0.8,application/signed-exchange;v=b3;q=0.9","sec-fetch-site":"none","sec-fetch-mode":"navigate","sec-fetch-user":"?1","sec-fetch-dest":"document","accept-encoding":"gzip, deflate, br","accept-language":"en-GB,en-US;q=0.9,en;q=0.8"} 
+21-09-2021 13:14:28.112 INFO  Ответ сервера: Page /123/32132 not found 
+21-09-2021 13:14:28.816 INFO  Запрос на сервер: Method - GET; 
+        URL - /favicon.ico; 
+        Body - {}; 
+        Headers - {"host":"127.0.0.1:2000","connection":"keep-alive","pragma":"no-cache","cache-control":"no-cache","sec-ch-ua":"\"Google Chrome\";v=\"93\", \" Not;A Brand\";v=\"99\", \"Chromium\";v=\"93\"","sec-ch-ua-mobile":"?0","user-agent":"Mozilla/5.0 (Macintosh; Intel Mac OS X 10_15_7) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/93.0.4577.82 Safari/537.36","sec-ch-ua-platform":"\"macOS\"","accept":"image/avif,image/webp,image/apng,image/svg+xml,image/*,*/*;q=0.8","sec-fetch-site":"same-origin","sec-fetch-mode":"no-cors","sec-fetch-dest":"image","referer":"http://127.0.0.1:2000/123/32132","accept-encoding":"gzip, deflate, br","accept-language":"en-GB,en-US;q=0.9,en;q=0.8"} 
+21-09-2021 13:14:28.817 INFO  Ответ сервера: Page /favicon.ico not found 
+21-09-2021 13:14:32.443 INFO  Запрос на сервер: Method - GET; 
+        URL - /gallery/1; 
+        Body - {}; 
+        Headers - {"host":"127.0.0.1:2000","connection":"keep-alive","sec-ch-ua":"\"Google Chrome\";v=\"93\", \" Not;A Brand\";v=\"99\", \"Chromium\";v=\"93\"","authorization":"token","sec-ch-ua-mobile":"?0","user-agent":"Mozilla/5.0 (Macintosh; Intel Mac OS X 10_15_7) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/93.0.4577.82 Safari/537.36","sec-ch-ua-platform":"\"macOS\"","accept":"*/*","origin":"http://localhost:63342","sec-fetch-site":"cross-site","sec-fetch-mode":"cors","sec-fetch-dest":"empty","referer":"http://localhost:63342/","accept-encoding":"gzip, deflate, br","accept-language":"en-GB,en-US;q=0.9,en;q=0.8"} 
+21-09-2021 13:14:32.445 INFO  Ответ сервера: {"objects":["../../server/gallery/images/1/1565a95fb25c7744777b506ce76cc3f0e6-21-gaben.jpg","../../server/gallery/images/1/599379.jpg","../../server/gallery/images/1/605592.png","../../server/gallery/images/1/736461.png"],"page":"1","total":3} 
+21-09-2021 13:14:34.129 INFO  Запрос на сервер: Method - GET; 
+        URL - /gallery/2; 
+        Body - {}; 
+        Headers - {"host":"127.0.0.1:2000","connection":"keep-alive","sec-ch-ua":"\"Google Chrome\";v=\"93\", \" Not;A Brand\";v=\"99\", \"Chromium\";v=\"93\"","authorization":"token","sec-ch-ua-mobile":"?0","user-agent":"Mozilla/5.0 (Macintosh; Intel Mac OS X 10_15_7) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/93.0.4577.82 Safari/537.36","sec-ch-ua-platform":"\"macOS\"","accept":"*/*","origin":"http://localhost:63342","sec-fetch-site":"cross-site","sec-fetch-mode":"cors","sec-fetch-dest":"empty","referer":"http://localhost:63342/","accept-encoding":"gzip, deflate, br","accept-language":"en-GB,en-US;q=0.9,en;q=0.8"} 
+21-09-2021 13:14:34.131 INFO  Ответ сервера: {"objects":["../../server/gallery/images/2/128706.png","../../server/gallery/images/2/162661f650c2d06a3fa072a9a97ab236.jpg","../../server/gallery/images/2/415519.jpg","../../server/gallery/images/2/640956.jpg","../../server/gallery/images/2/934905.jpg"],"page":"2","total":3} 
+21-09-2021 13:14:35.274 INFO  Запрос на сервер: Method - GET; 
+        URL - /gallery/3; 
+        Body - {}; 
+        Headers - {"host":"127.0.0.1:2000","connection":"keep-alive","sec-ch-ua":"\"Google Chrome\";v=\"93\", \" Not;A Brand\";v=\"99\", \"Chromium\";v=\"93\"","authorization":"token","sec-ch-ua-mobile":"?0","user-agent":"Mozilla/5.0 (Macintosh; Intel Mac OS X 10_15_7) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/93.0.4577.82 Safari/537.36","sec-ch-ua-platform":"\"macOS\"","accept":"*/*","origin":"http://localhost:63342","sec-fetch-site":"cross-site","sec-fetch-mode":"cors","sec-fetch-dest":"empty","referer":"http://localhost:63342/","accept-encoding":"gzip, deflate, br","accept-language":"en-GB,en-US;q=0.9,en;q=0.8"} 
+21-09-2021 13:14:35.278 INFO  Ответ сервера: {"objects":["../../server/gallery/images/3/1565a95fb25c7744777b506ce76cc3f0e6-21-gaben.jpg","../../server/gallery/images/3/505616.png","../../server/gallery/images/3/632079.png","../../server/gallery/images/3/835097.jpg"],"page":"3","total":3} 
+21-09-2021 13:14:45.921 INFO  Запрос на сервер: Method - GET; 
+        URL - /authorizaton; 
+        Body - {}; 
+        Headers - {"host":"127.0.0.1:2000","connection":"keep-alive","sec-ch-ua":"\"Google Chrome\";v=\"93\", \" Not;A Brand\";v=\"99\", \"Chromium\";v=\"93\"","sec-ch-ua-mobile":"?0","sec-ch-ua-platform":"\"macOS\"","upgrade-insecure-requests":"1","user-agent":"Mozilla/5.0 (Macintosh; Intel Mac OS X 10_15_7) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/93.0.4577.82 Safari/537.36","accept":"text/html,application/xhtml+xml,application/xml;q=0.9,image/avif,image/webp,image/apng,*/*;q=0.8,application/signed-exchange;v=b3;q=0.9","sec-fetch-site":"none","sec-fetch-mode":"navigate","sec-fetch-user":"?1","sec-fetch-dest":"document","accept-encoding":"gzip, deflate, br","accept-language":"en-GB,en-US;q=0.9,en;q=0.8"} 
+21-09-2021 13:14:45.923 INFO  Ответ сервера: Page /authorizaton not found 
+21-09-2021 13:14:54.349 INFO  Запрос на сервер: Method - GET; 
+        URL - /authorization; 
+        Body - {}; 
+        Headers - {"host":"127.0.0.1:2000","connection":"keep-alive","sec-ch-ua":"\"Google Chrome\";v=\"93\", \" Not;A Brand\";v=\"99\", \"Chromium\";v=\"93\"","sec-ch-ua-mobile":"?0","sec-ch-ua-platform":"\"macOS\"","upgrade-insecure-requests":"1","user-agent":"Mozilla/5.0 (Macintosh; Intel Mac OS X 10_15_7) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/93.0.4577.82 Safari/537.36","accept":"text/html,application/xhtml+xml,application/xml;q=0.9,image/avif,image/webp,image/apng,*/*;q=0.8,application/signed-exchange;v=b3;q=0.9","sec-fetch-site":"none","sec-fetch-mode":"navigate","sec-fetch-user":"?1","sec-fetch-dest":"document","accept-encoding":"gzip, deflate, br","accept-language":"en-GB,en-US;q=0.9,en;q=0.8"} 
+21-09-2021 13:14:54.351 INFO  Ответ сервера: Page /authorization not found 
+21-09-2021 13:15:04.944 INFO  Запрос на сервер: Method - GET; 
+        URL - /authorization/2; 
+        Body - {}; 
+        Headers - {"host":"127.0.0.1:2000","connection":"keep-alive","sec-ch-ua":"\"Google Chrome\";v=\"93\", \" Not;A Brand\";v=\"99\", \"Chromium\";v=\"93\"","sec-ch-ua-mobile":"?0","sec-ch-ua-platform":"\"macOS\"","upgrade-insecure-requests":"1","user-agent":"Mozilla/5.0 (Macintosh; Intel Mac OS X 10_15_7) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/93.0.4577.82 Safari/537.36","accept":"text/html,application/xhtml+xml,application/xml;q=0.9,image/avif,image/webp,image/apng,*/*;q=0.8,application/signed-exchange;v=b3;q=0.9","sec-fetch-site":"none","sec-fetch-mode":"navigate","sec-fetch-user":"?1","sec-fetch-dest":"document","accept-encoding":"gzip, deflate, br","accept-language":"en-GB,en-US;q=0.9,en;q=0.8"} 
+21-09-2021 13:15:04.944 INFO  Ответ сервера: Page /authorization/2 not found 
+21-09-2021 13:16:59.014 INFO  Ответ сервера: Server start 
+21-09-2021 13:17:02.968 INFO  Запрос на сервер: Method - GET; 
+        URL - /authorization/2; 
+        Body - {}; 
+        Headers - {"host":"127.0.0.1:2000","connection":"keep-alive","cache-control":"max-age=0","sec-ch-ua":"\"Google Chrome\";v=\"93\", \" Not;A Brand\";v=\"99\", \"Chromium\";v=\"93\"","sec-ch-ua-mobile":"?0","sec-ch-ua-platform":"\"macOS\"","upgrade-insecure-requests":"1","user-agent":"Mozilla/5.0 (Macintosh; Intel Mac OS X 10_15_7) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/93.0.4577.82 Safari/537.36","accept":"text/html,application/xhtml+xml,application/xml;q=0.9,image/avif,image/webp,image/apng,*/*;q=0.8,application/signed-exchange;v=b3;q=0.9","sec-fetch-site":"none","sec-fetch-mode":"navigate","sec-fetch-user":"?1","sec-fetch-dest":"document","accept-encoding":"gzip, deflate, br","accept-language":"en-GB,en-US;q=0.9,en;q=0.8"} 
+21-09-2021 13:17:02.972 INFO  Ответ сервера: Page /authorization/2 not found 
+21-09-2021 13:17:07.064 INFO  Запрос на сервер: Method - GET; 
+        URL - /gallery/3; 
+        Body - {}; 
+        Headers - {"host":"127.0.0.1:2000","connection":"keep-alive","sec-ch-ua":"\"Google Chrome\";v=\"93\", \" Not;A Brand\";v=\"99\", \"Chromium\";v=\"93\"","authorization":"token","sec-ch-ua-mobile":"?0","user-agent":"Mozilla/5.0 (Macintosh; Intel Mac OS X 10_15_7) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/93.0.4577.82 Safari/537.36","sec-ch-ua-platform":"\"macOS\"","accept":"*/*","origin":"http://localhost:63342","sec-fetch-site":"cross-site","sec-fetch-mode":"cors","sec-fetch-dest":"empty","referer":"http://localhost:63342/","accept-encoding":"gzip, deflate, br","accept-language":"en-GB,en-US;q=0.9,en;q=0.8"} 
+21-09-2021 13:17:07.066 INFO  Ответ сервера: {"objects":["../../server/gallery/images/1/1565a95fb25c7744777b506ce76cc3f0e6-21-gaben.jpg","../../server/gallery/images/1/599379.jpg","../../server/gallery/images/1/605592.png","../../server/gallery/images/1/736461.png"],"page":"1","total":3} 
+21-09-2021 13:17:09.009 INFO  Запрос на сервер: Method - GET; 
+        URL - /gallery/2; 
+        Body - {}; 
+        Headers - {"host":"127.0.0.1:2000","connection":"keep-alive","sec-ch-ua":"\"Google Chrome\";v=\"93\", \" Not;A Brand\";v=\"99\", \"Chromium\";v=\"93\"","authorization":"token","sec-ch-ua-mobile":"?0","user-agent":"Mozilla/5.0 (Macintosh; Intel Mac OS X 10_15_7) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/93.0.4577.82 Safari/537.36","sec-ch-ua-platform":"\"macOS\"","accept":"*/*","origin":"http://localhost:63342","sec-fetch-site":"cross-site","sec-fetch-mode":"cors","sec-fetch-dest":"empty","referer":"http://localhost:63342/","accept-encoding":"gzip, deflate, br","accept-language":"en-GB,en-US;q=0.9,en;q=0.8"} 
+21-09-2021 13:17:09.010 INFO  Ответ сервера: {"objects":["../../server/gallery/images/1/1565a95fb25c7744777b506ce76cc3f0e6-21-gaben.jpg","../../server/gallery/images/1/599379.jpg","../../server/gallery/images/1/605592.png","../../server/gallery/images/1/736461.png"],"page":"1","total":3} 
+21-09-2021 13:17:10.426 INFO  Запрос на сервер: Method - GET; 
+        URL - /gallery/1; 
+        Body - {}; 
+        Headers - {"host":"127.0.0.1:2000","connection":"keep-alive","sec-ch-ua":"\"Google Chrome\";v=\"93\", \" Not;A Brand\";v=\"99\", \"Chromium\";v=\"93\"","authorization":"token","sec-ch-ua-mobile":"?0","user-agent":"Mozilla/5.0 (Macintosh; Intel Mac OS X 10_15_7) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/93.0.4577.82 Safari/537.36","sec-ch-ua-platform":"\"macOS\"","accept":"*/*","origin":"http://localhost:63342","sec-fetch-site":"cross-site","sec-fetch-mode":"cors","sec-fetch-dest":"empty","referer":"http://localhost:63342/","accept-encoding":"gzip, deflate, br","accept-language":"en-GB,en-US;q=0.9,en;q=0.8"} 
+21-09-2021 13:17:10.426 INFO  Ответ сервера: {"objects":["../../server/gallery/images/1/1565a95fb25c7744777b506ce76cc3f0e6-21-gaben.jpg","../../server/gallery/images/1/599379.jpg","../../server/gallery/images/1/605592.png","../../server/gallery/images/1/736461.png"],"page":"1","total":3} 
+21-09-2021 13:17:12.344 INFO  Запрос на сервер: Method - GET; 
+        URL - /gallery/2; 
+        Body - {}; 
+        Headers - {"host":"127.0.0.1:2000","connection":"keep-alive","sec-ch-ua":"\"Google Chrome\";v=\"93\", \" Not;A Brand\";v=\"99\", \"Chromium\";v=\"93\"","authorization":"token","sec-ch-ua-mobile":"?0","user-agent":"Mozilla/5.0 (Macintosh; Intel Mac OS X 10_15_7) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/93.0.4577.82 Safari/537.36","sec-ch-ua-platform":"\"macOS\"","accept":"*/*","origin":"http://localhost:63342","sec-fetch-site":"cross-site","sec-fetch-mode":"cors","sec-fetch-dest":"empty","referer":"http://localhost:63342/","accept-encoding":"gzip, deflate, br","accept-language":"en-GB,en-US;q=0.9,en;q=0.8"} 
+21-09-2021 13:17:12.345 INFO  Ответ сервера: {"objects":["../../server/gallery/images/1/1565a95fb25c7744777b506ce76cc3f0e6-21-gaben.jpg","../../server/gallery/images/1/599379.jpg","../../server/gallery/images/1/605592.png","../../server/gallery/images/1/736461.png"],"page":"1","total":3} 
+21-09-2021 13:17:16.441 INFO  Запрос на сервер: Method - GET; 
+        URL - /authorization/; 
+        Body - {}; 
+        Headers - {"host":"127.0.0.1:2000","connection":"keep-alive","sec-ch-ua":"\"Google Chrome\";v=\"93\", \" Not;A Brand\";v=\"99\", \"Chromium\";v=\"93\"","sec-ch-ua-mobile":"?0","sec-ch-ua-platform":"\"macOS\"","upgrade-insecure-requests":"1","user-agent":"Mozilla/5.0 (Macintosh; Intel Mac OS X 10_15_7) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/93.0.4577.82 Safari/537.36","accept":"text/html,application/xhtml+xml,application/xml;q=0.9,image/avif,image/webp,image/apng,*/*;q=0.8,application/signed-exchange;v=b3;q=0.9","sec-fetch-site":"none","sec-fetch-mode":"navigate","sec-fetch-user":"?1","sec-fetch-dest":"document","accept-encoding":"gzip, deflate, br","accept-language":"en-GB,en-US;q=0.9,en;q=0.8"} 
+21-09-2021 13:17:16.442 INFO  Ответ сервера: Page /authorization/ not found 
+21-09-2021 13:17:24.270 INFO  Запрос на сервер: Method - GET; 
+        URL - /gallery/2; 
+        Body - {}; 
+        Headers - {"host":"127.0.0.1:2000","connection":"keep-alive","sec-ch-ua":"\"Google Chrome\";v=\"93\", \" Not;A Brand\";v=\"99\", \"Chromium\";v=\"93\"","authorization":"undefined","sec-ch-ua-mobile":"?0","user-agent":"Mozilla/5.0 (Macintosh; Intel Mac OS X 10_15_7) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/93.0.4577.82 Safari/537.36","sec-ch-ua-platform":"\"macOS\"","accept":"*/*","origin":"http://localhost:63342","sec-fetch-site":"cross-site","sec-fetch-mode":"cors","sec-fetch-dest":"empty","referer":"http://localhost:63342/","accept-encoding":"gzip, deflate, br","accept-language":"en-GB,en-US;q=0.9,en;q=0.8"} 
+21-09-2021 13:17:24.271 INFO  Ответ сервера: {"objects":["../../server/gallery/images/1/1565a95fb25c7744777b506ce76cc3f0e6-21-gaben.jpg","../../server/gallery/images/1/599379.jpg","../../server/gallery/images/1/605592.png","../../server/gallery/images/1/736461.png"],"page":"1","total":3} 
+21-09-2021 13:17:26.818 INFO  Запрос на сервер: Method - POST; 
+        URL - /authorization; 
+        Body - {"email":"asergeev@flo.team","password":"jgF5tn4F"}; 
+        Headers - {"host":"127.0.0.1:2000","connection":"keep-alive","content-length":"51","sec-ch-ua":"\"Google Chrome\";v=\"93\", \" Not;A Brand\";v=\"99\", \"Chromium\";v=\"93\"","sec-ch-ua-mobile":"?0","user-agent":"Mozilla/5.0 (Macintosh; Intel Mac OS X 10_15_7) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/93.0.4577.82 Safari/537.36","sec-ch-ua-platform":"\"macOS\"","content-type":"application/json","accept":"*/*","origin":"http://localhost:63342","sec-fetch-site":"cross-site","sec-fetch-mode":"cors","sec-fetch-dest":"empty","referer":"http://localhost:63342/","accept-encoding":"gzip, deflate, br","accept-language":"en-GB,en-US;q=0.9,en;q=0.8"} 
+21-09-2021 13:17:26.818 INFO  Ответ сервера: {"token":"token"} 
+21-09-2021 13:17:26.999 INFO  Запрос на сервер: Method - GET; 
+        URL - /gallery/2; 
+        Body - {}; 
+        Headers - {"host":"127.0.0.1:2000","connection":"keep-alive","sec-ch-ua":"\"Google Chrome\";v=\"93\", \" Not;A Brand\";v=\"99\", \"Chromium\";v=\"93\"","authorization":"token","sec-ch-ua-mobile":"?0","user-agent":"Mozilla/5.0 (Macintosh; Intel Mac OS X 10_15_7) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/93.0.4577.82 Safari/537.36","sec-ch-ua-platform":"\"macOS\"","accept":"*/*","origin":"http://localhost:63342","sec-fetch-site":"cross-site","sec-fetch-mode":"cors","sec-fetch-dest":"empty","referer":"http://localhost:63342/","accept-encoding":"gzip, deflate, br","accept-language":"en-GB,en-US;q=0.9,en;q=0.8"} 
+21-09-2021 13:17:27.000 INFO  Ответ сервера: {"objects":["../../server/gallery/images/1/1565a95fb25c7744777b506ce76cc3f0e6-21-gaben.jpg","../../server/gallery/images/1/599379.jpg","../../server/gallery/images/1/605592.png","../../server/gallery/images/1/736461.png"],"page":"1","total":3} 
+21-09-2021 13:17:38.978 INFO  Запрос на сервер: Method - GET; 
+        URL - /api-docs/; 
+        Body - {}; 
+        Headers - {"host":"127.0.0.1:2000","connection":"keep-alive","sec-ch-ua":"\"Google Chrome\";v=\"93\", \" Not;A Brand\";v=\"99\", \"Chromium\";v=\"93\"","sec-ch-ua-mobile":"?0","sec-ch-ua-platform":"\"macOS\"","upgrade-insecure-requests":"1","user-agent":"Mozilla/5.0 (Macintosh; Intel Mac OS X 10_15_7) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/93.0.4577.82 Safari/537.36","accept":"text/html,application/xhtml+xml,application/xml;q=0.9,image/avif,image/webp,image/apng,*/*;q=0.8,application/signed-exchange;v=b3;q=0.9","sec-fetch-site":"none","sec-fetch-mode":"navigate","sec-fetch-user":"?1","sec-fetch-dest":"document","accept-encoding":"gzip, deflate, br","accept-language":"en-GB,en-US;q=0.9,en;q=0.8","if-none-match":"W/\"c20-YaHADSLwvE3kEdwr5u3Bfu2fhF8\""} 
+21-09-2021 13:17:39.106 INFO  Запрос на сервер: Method - GET; 
+        URL - /api-docs/swagger-ui-bundle.js; 
+        Body - {}; 
+        Headers - {"host":"127.0.0.1:2000","connection":"keep-alive","sec-ch-ua":"\"Google Chrome\";v=\"93\", \" Not;A Brand\";v=\"99\", \"Chromium\";v=\"93\"","sec-ch-ua-mobile":"?0","user-agent":"Mozilla/5.0 (Macintosh; Intel Mac OS X 10_15_7) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/93.0.4577.82 Safari/537.36","sec-ch-ua-platform":"\"macOS\"","accept":"*/*","sec-fetch-site":"same-origin","sec-fetch-mode":"no-cors","sec-fetch-dest":"script","referer":"http://127.0.0.1:2000/api-docs/","accept-encoding":"gzip, deflate, br","accept-language":"en-GB,en-US;q=0.9,en;q=0.8"} 
+21-09-2021 13:17:39.107 INFO  Запрос на сервер: Method - GET; 
+        URL - /api-docs/swagger-ui.css; 
+        Body - {}; 
+        Headers - {"host":"127.0.0.1:2000","connection":"keep-alive","sec-ch-ua":"\"Google Chrome\";v=\"93\", \" Not;A Brand\";v=\"99\", \"Chromium\";v=\"93\"","sec-ch-ua-mobile":"?0","user-agent":"Mozilla/5.0 (Macintosh; Intel Mac OS X 10_15_7) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/93.0.4577.82 Safari/537.36","sec-ch-ua-platform":"\"macOS\"","accept":"text/css,*/*;q=0.1","sec-fetch-site":"same-origin","sec-fetch-mode":"no-cors","sec-fetch-dest":"style","referer":"http://127.0.0.1:2000/api-docs/","accept-encoding":"gzip, deflate, br","accept-language":"en-GB,en-US;q=0.9,en;q=0.8","if-none-match":"W/\"23135-17bf2a3f559\"","if-modified-since":"Fri, 17 Sep 2021 07:23:56 GMT"} 
+21-09-2021 13:17:39.109 INFO  Запрос на сервер: Method - GET; 
+        URL - /api-docs/swagger-ui-standalone-preset.js; 
+        Body - {}; 
+        Headers - {"host":"127.0.0.1:2000","connection":"keep-alive","sec-ch-ua":"\"Google Chrome\";v=\"93\", \" Not;A Brand\";v=\"99\", \"Chromium\";v=\"93\"","sec-ch-ua-mobile":"?0","user-agent":"Mozilla/5.0 (Macintosh; Intel Mac OS X 10_15_7) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/93.0.4577.82 Safari/537.36","sec-ch-ua-platform":"\"macOS\"","accept":"*/*","sec-fetch-site":"same-origin","sec-fetch-mode":"no-cors","sec-fetch-dest":"script","referer":"http://127.0.0.1:2000/api-docs/","accept-encoding":"gzip, deflate, br","accept-language":"en-GB,en-US;q=0.9,en;q=0.8","if-none-match":"W/\"52540-17bf2a3f638\"","if-modified-since":"Fri, 17 Sep 2021 07:23:56 GMT"} 
+21-09-2021 13:17:39.110 INFO  Запрос на сервер: Method - GET; 
+        URL - /api-docs/swagger-ui-init.js; 
+        Body - {}; 
+        Headers - {"host":"127.0.0.1:2000","connection":"keep-alive","sec-ch-ua":"\"Google Chrome\";v=\"93\", \" Not;A Brand\";v=\"99\", \"Chromium\";v=\"93\"","sec-ch-ua-mobile":"?0","user-agent":"Mozilla/5.0 (Macintosh; Intel Mac OS X 10_15_7) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/93.0.4577.82 Safari/537.36","sec-ch-ua-platform":"\"macOS\"","accept":"*/*","sec-fetch-site":"same-origin","sec-fetch-mode":"no-cors","sec-fetch-dest":"script","referer":"http://127.0.0.1:2000/api-docs/","accept-encoding":"gzip, deflate, br","accept-language":"en-GB,en-US;q=0.9,en;q=0.8","if-none-match":"W/\"14aa-0g4sd2horCIldi6S5+JfFf5c5VY\""} 
+21-09-2021 13:18:14.491 INFO  Ответ сервера: Server start 
+21-09-2021 13:18:21.700 INFO  Запрос на сервер: Method - GET; 
+        URL - /; 
+        Body - {}; 
+        Headers - {"host":"127.0.0.1:2000","connection":"keep-alive","sec-ch-ua":"\"Google Chrome\";v=\"93\", \" Not;A Brand\";v=\"99\", \"Chromium\";v=\"93\"","sec-ch-ua-mobile":"?0","sec-ch-ua-platform":"\"macOS\"","upgrade-insecure-requests":"1","user-agent":"Mozilla/5.0 (Macintosh; Intel Mac OS X 10_15_7) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/93.0.4577.82 Safari/537.36","accept":"text/html,application/xhtml+xml,application/xml;q=0.9,image/avif,image/webp,image/apng,*/*;q=0.8,application/signed-exchange;v=b3;q=0.9","sec-fetch-site":"none","sec-fetch-mode":"navigate","sec-fetch-user":"?1","sec-fetch-dest":"document","accept-encoding":"gzip, deflate, br","accept-language":"en-GB,en-US;q=0.9,en;q=0.8"} 
+21-09-2021 13:18:21.706 INFO  Ответ сервера: Page / not found 
+21-09-2021 13:18:30.286 INFO  Запрос на сервер: Method - GET; 
+        URL - /authorization; 
+        Body - {}; 
+        Headers - {"host":"127.0.0.1:2000","connection":"keep-alive","sec-ch-ua":"\"Google Chrome\";v=\"93\", \" Not;A Brand\";v=\"99\", \"Chromium\";v=\"93\"","sec-ch-ua-mobile":"?0","sec-ch-ua-platform":"\"macOS\"","upgrade-insecure-requests":"1","user-agent":"Mozilla/5.0 (Macintosh; Intel Mac OS X 10_15_7) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/93.0.4577.82 Safari/537.36","accept":"text/html,application/xhtml+xml,application/xml;q=0.9,image/avif,image/webp,image/apng,*/*;q=0.8,application/signed-exchange;v=b3;q=0.9","sec-fetch-site":"none","sec-fetch-mode":"navigate","sec-fetch-user":"?1","sec-fetch-dest":"document","accept-encoding":"gzip, deflate, br","accept-language":"en-GB,en-US;q=0.9,en;q=0.8"} 
+21-09-2021 13:18:30.287 INFO  Ответ сервера: Page /authorization not found 
+21-09-2021 13:18:37.412 INFO  Ответ сервера: No Authorization 

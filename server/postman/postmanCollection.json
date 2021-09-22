@@ -1,0 +1,308 @@
+{
+  "info": {
+    "_postman_id": "9ea332ac-501e-4afa-9bc6-326b0286d328",
+    "name": "Module2_part3_express_api",
+    "schema": "https://schema.getpostman.com/json/collection/v2.0.0/collection.json"
+  },
+  "item": [
+    {
+      "name": "Authorization",
+      "id": "b575656e-59d5-4b3a-94c1-d8c441562465",
+      "request": {
+        "method": "POST",
+        "header": [
+          {
+            "key": "Content-Type",
+            "value": "application/json",
+            "type": "text"
+          }
+        ],
+        "body": {
+          "mode": "raw",
+          "raw": "{\r\n    \"email\": \"asergeev@flo.team\",\r\n    \"password\": \"jgF5tn4F\"\r\n}"
+        },
+        "url": "http://127.0.0.1:2000/authorization"
+      },
+      "response": [
+        {
+          "id": "d3ecf35a-7340-44e7-aee7-76c9f6c816bb",
+          "name": "New Request",
+          "originalRequest": {
+            "method": "POST",
+            "header": [
+              {
+                "key": "Content-Type",
+                "value": "application/json",
+                "type": "text"
+              }
+            ],
+            "body": {
+              "mode": "raw",
+              "raw": "{\r\n    \"email\": \"asergeev@flo.team\",\r\n    \"password\": \"jgF5tn4F\"\r\n}"
+            },
+            "url": "http://127.0.0.1:2000/authorization"
+          },
+          "status": "OK",
+          "code": 200,
+          "_postman_previewlanguage": "json",
+          "header": [
+            {
+              "key": "X-Powered-By",
+              "value": "Express"
+            },
+            {
+              "key": "Access-Control-Allow-Origin",
+              "value": "*"
+            },
+            {
+              "key": "Date",
+              "value": "Sun, 19 Sep 2021 14:43:00 GMT"
+            },
+            {
+              "key": "Connection",
+              "value": "keep-alive"
+            },
+            {
+              "key": "Keep-Alive",
+              "value": "timeout=5"
+            },
+            {
+              "key": "Content-Length",
+              "value": "17"
+            }
+          ],
+          "cookie": [],
+          "body": "{\n    \"token\": \"token\"\n}"
+        }
+      ]
+    },
+    {
+      "name": "Get gallery",
+      "id": "a9f6aea7-affd-40cb-9d11-1bbbc0dd8a7f",
+      "request": {
+        "method": "GET",
+        "header": [
+          {
+            "key": "Authorization",
+            "value": "token",
+            "type": "text"
+          }
+        ],
+        "url": {
+          "raw": "http://127.0.0.1:2000/gallery/:page",
+          "protocol": "http",
+          "host": [
+            "127",
+            "0",
+            "0",
+            "1"
+          ],
+          "port": "2000",
+          "path": [
+            "gallery",
+            ":page"
+          ],
+          "variable": [
+            {
+              "key": "page",
+              "value": "2"
+            }
+          ]
+        }
+      },
+      "response": [
+        {
+          "id": "0cacf804-6dec-4df5-9253-1a02c301e579",
+          "name": "Get gallery",
+          "originalRequest": {
+            "method": "GET",
+            "header": [
+              {
+                "key": "Authorization",
+                "value": "token",
+                "type": "text"
+              }
+            ],
+            "url": {
+              "raw": "http://127.0.0.1:2000/gallery/:page",
+              "protocol": "http",
+              "host": [
+                "127",
+                "0",
+                "0",
+                "1"
+              ],
+              "port": "2000",
+              "path": [
+                "gallery",
+                ":page"
+              ],
+              "variable": [
+                {
+                  "key": "page",
+                  "value": "2"
+                }
+              ]
+            }
+          },
+          "status": "OK",
+          "code": 200,
+          "_postman_previewlanguage": "json",
+          "header": [
+            {
+              "key": "X-Powered-By",
+              "value": "Express"
+            },
+            {
+              "key": "Access-Control-Allow-Origin",
+              "value": "*"
+            },
+            {
+              "key": "Date",
+              "value": "Sun, 19 Sep 2021 14:44:28 GMT"
+            },
+            {
+              "key": "Connection",
+              "value": "keep-alive"
+            },
+            {
+              "key": "Keep-Alive",
+              "value": "timeout=5"
+            },
+            {
+              "key": "Content-Length",
+              "value": "256"
+            }
+          ],
+          "cookie": [],
+          "body": "{\n    \"objects\": [\n        \"..\\\\..\\\\server\\\\gallery\\\\images\\\\2\\\\128706.png\",\n        \"..\\\\..\\\\server\\\\gallery\\\\images\\\\2\\\\162661f650c2d06a3fa072a9a97ab236.jpg\",\n        \"..\\\\..\\\\server\\\\gallery\\\\images\\\\2\\\\415519.jpg\",\n        \"..\\\\..\\\\server\\\\gallery\\\\images\\\\2\\\\640956.jpg\"\n    ],\n    \"page\": \"2\",\n    \"total\": 3\n}"
+        }
+      ]
+    },
+    {
+      "name": "Upload images",
+      "id": "9523c25b-d3ec-404c-9f3d-d318a3880f8f",
+      "request": {
+        "method": "POST",
+        "header": [
+          {
+            "key": "Authorization",
+            "value": "token",
+            "type": "text"
+          }
+        ],
+        "body": {
+          "mode": "formdata",
+          "formdata": [
+            {
+              "key": "photo",
+              "description": "Image",
+              "type": "file",
+              "src": "/D:/screan/6c3a83041b16cc0c9651125ad8ce31af.jpg"
+            }
+          ]
+        },
+        "url": {
+          "raw": "http://127.0.0.1:2000/gallery/:page",
+          "protocol": "http",
+          "host": [
+            "127",
+            "0",
+            "0",
+            "1"
+          ],
+          "port": "2000",
+          "path": [
+            "gallery",
+            ":page"
+          ],
+          "variable": [
+            {
+              "key": "page",
+              "value": "2"
+            }
+          ]
+        }
+      },
+      "response": [
+        {
+          "id": "d11d7ebe-4780-4738-af35-b58cbf2c3ccf",
+          "name": "Upload images",
+          "originalRequest": {
+            "method": "POST",
+            "header": [
+              {
+                "key": "Authorization",
+                "value": "token",
+                "type": "text"
+              }
+            ],
+            "body": {
+              "mode": "formdata",
+              "formdata": [
+                {
+                  "key": "photo",
+                  "description": "Image",
+                  "type": "file",
+                  "src": "/D:/screan/6c3a83041b16cc0c9651125ad8ce31af.jpg"
+                }
+              ]
+            },
+            "url": {
+              "raw": "http://127.0.0.1:2000/gallery/:page",
+              "protocol": "http",
+              "host": [
+                "127",
+                "0",
+                "0",
+                "1"
+              ],
+              "port": "2000",
+              "path": [
+                "gallery",
+                ":page"
+              ],
+              "variable": [
+                {
+                  "key": "page",
+                  "value": "2"
+                }
+              ]
+            }
+          },
+          "status": "OK",
+          "code": 200,
+          "_postman_previewlanguage": "json",
+          "header": [
+            {
+              "key": "X-Powered-By",
+              "value": "Express"
+            },
+            {
+              "key": "Access-Control-Allow-Origin",
+              "value": "*"
+            },
+            {
+              "key": "Date",
+              "value": "Sun, 19 Sep 2021 14:46:39 GMT"
+            },
+            {
+              "key": "Connection",
+              "value": "keep-alive"
+            },
+            {
+              "key": "Keep-Alive",
+              "value": "timeout=5"
+            },
+            {
+              "key": "Content-Length",
+              "value": "121"
+            }
+          ],
+          "cookie": [],
+          "body": "{\n    \"message\": \"Изображения успешно загружены\",\n    \"objects\": [\n        \"6c3a83041b16cc0c9651125ad8ce31af.jpg\"\n    ]\n}"
+        }
+      ]
+    }
+  ]
+}

@@ -1,0 +1,21 @@
+20-09-2021 18:22:08.477 INFO  Ответ сервера: Server start 
+20-09-2021 18:22:25.322 INFO  Запрос на сервер: Method - POST; 
+        URL - /authorization; 
+        Body - {"email":"asergeev@flo.team","password":"jgF5tn4F"}; 
+        Headers - {"host":"127.0.0.1:2000","connection":"keep-alive","content-length":"51","sec-ch-ua":"\" Not A;Brand\";v=\"99\", \"Chromium\";v=\"92\", \"Opera GX\";v=\"78\"","sec-ch-ua-mobile":"?0","user-agent":"Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/92.0.4515.131 Safari/537.36 OPR/78.0.4093.186","content-type":"application/json","accept":"*/*","origin":"http://localhost:63342","sec-fetch-site":"cross-site","sec-fetch-mode":"cors","sec-fetch-dest":"empty","referer":"http://localhost:63342/","accept-encoding":"gzip, deflate, br","accept-language":"ru-RU,ru;q=0.9,en-US;q=0.8,en;q=0.7"} 
+20-09-2021 18:22:25.322 INFO  Ответ сервера: {"token":"token"} 
+20-09-2021 18:22:25.730 INFO  Запрос на сервер: Method - GET; 
+        URL - /gallery/1; 
+        Body - {}; 
+        Headers - {"host":"127.0.0.1:2000","connection":"keep-alive","sec-ch-ua":"\" Not A;Brand\";v=\"99\", \"Chromium\";v=\"92\", \"Opera GX\";v=\"78\"","user-agent":"Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/92.0.4515.131 Safari/537.36 OPR/78.0.4093.186","sec-ch-ua-mobile":"?0","authorization":"token","accept":"*/*","origin":"http://localhost:63342","sec-fetch-site":"cross-site","sec-fetch-mode":"cors","sec-fetch-dest":"empty","referer":"http://localhost:63342/","accept-encoding":"gzip, deflate, br","accept-language":"ru-RU,ru;q=0.9,en-US;q=0.8,en;q=0.7"} 
+20-09-2021 18:22:25.733 INFO  Ответ сервера: {"objects":["..\\..\\server\\gallery\\images\\1\\1565a95fb25c7744777b506ce76cc3f0e6-21-gaben.jpg","..\\..\\server\\gallery\\images\\1\\599379.jpg","..\\..\\server\\gallery\\images\\1\\605592.png","..\\..\\server\\gallery\\images\\1\\736461.png"],"page":"1","total":3} 
+20-09-2021 18:22:33.065 INFO  Запрос на сервер: Method - POST; 
+        URL - /authorization; 
+        Body - {"email":"asergeev@flo.team","password":"jgF5tn4F"}; 
+        Headers - {"host":"127.0.0.1:2000","connection":"keep-alive","content-length":"51","sec-ch-ua":"\" Not A;Brand\";v=\"99\", \"Chromium\";v=\"92\", \"Opera GX\";v=\"78\"","sec-ch-ua-mobile":"?0","user-agent":"Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/92.0.4515.131 Safari/537.36 OPR/78.0.4093.186","content-type":"application/json","accept":"*/*","origin":"http://localhost:63342","sec-fetch-site":"cross-site","sec-fetch-mode":"cors","sec-fetch-dest":"empty","referer":"http://localhost:63342/","accept-encoding":"gzip, deflate, br","accept-language":"ru-RU,ru;q=0.9,en-US;q=0.8,en;q=0.7"} 
+20-09-2021 18:22:33.065 INFO  Ответ сервера: {"token":"token"} 
+20-09-2021 18:22:35.364 INFO  Запрос на сервер: Method - GET; 
+        URL - /gallery/2; 
+        Body - {}; 
+        Headers - {"host":"127.0.0.1:2000","connection":"keep-alive","sec-ch-ua":"\" Not A;Brand\";v=\"99\", \"Chromium\";v=\"92\", \"Opera GX\";v=\"78\"","user-agent":"Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/92.0.4515.131 Safari/537.36 OPR/78.0.4093.186","sec-ch-ua-mobile":"?0","authorization":"token","accept":"*/*","origin":"http://localhost:63342","sec-fetch-site":"cross-site","sec-fetch-mode":"cors","sec-fetch-dest":"empty","referer":"http://localhost:63342/","accept-encoding":"gzip, deflate, br","accept-language":"ru-RU,ru;q=0.9,en-US;q=0.8,en;q=0.7"} 
+20-09-2021 18:22:35.366 INFO  Ответ сервера: {"objects":["..\\..\\server\\gallery\\images\\2\\128706.png","..\\..\\server\\gallery\\images\\2\\162661f650c2d06a3fa072a9a97ab236.jpg","..\\..\\server\\gallery\\images\\2\\415519.jpg","..\\..\\server\\gallery\\images\\2\\640956.jpg"],"page":"2","total":3} 
