@@ -1,5 +1,5 @@
 import {NextFunction, Request, Response} from "express";
-import {logger} from "../logger/logger";
+import {logger} from "../logger/logger.js";
 
 function authorizationChecker(req: Request, res: Response, next: NextFunction): void {
     if (/gallery/.test(req.url)) {

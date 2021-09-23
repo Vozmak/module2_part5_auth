@@ -3,7 +3,7 @@ interface User {
   password: string;
 }
 
-import * as mongoose from 'mongoose';
+import mongoose from 'mongoose';
 
 const UserScheme = new mongoose.Schema<User>({
   email: {

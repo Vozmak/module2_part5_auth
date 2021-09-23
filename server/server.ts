@@ -1,15 +1,15 @@
 import { NextFunction, Request, Response } from 'express';
-import * as express from 'express';
-import * as cors from 'cors';
+import express from 'express';
+import cors from 'cors';
 import * as swaggerUi from 'swagger-ui-express';
-import * as YAML from 'yamljs';
-import * as fileUpload from 'express-fileupload';
-import { logger } from './logger/logger';
-import { authorizationChecker } from './middleware/authorizationChecker';
-import loginRouter from './routes/loginRouter';
-import displayGalleryRouter from './routes/displayGalleryRouter';
-import addImgRouter from './routes/addImgRouter';
-import { connectDb } from './mongoDB/mongoDbConnect';
+import YAML from 'yamljs';
+import fileUpload from 'express-fileupload';
+import { logger } from './logger/logger.js';
+import { authorizationChecker } from './middleware/authorizationChecker.js';
+import loginRouter from './routes/loginRouter.js';
+import displayGalleryRouter from './routes/displayGalleryRouter.js';
+import addImgRouter from './routes/addImgRouter.js';
+import { connectDb } from './mongoDB/mongoDbConnect.js';
 
 connectDb()
   .then(() => {

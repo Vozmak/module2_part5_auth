@@ -1,8 +1,9 @@
 {
-  "name": "module2_part2_gallery_server",
+  "name": "module2_part4_gallery_db",
   "version": "1.0.0",
   "description": "",
-  "main": "index.js",
+  "type": "module",
+  "main": "server/server",
   "scripts": {
     "test": "echo \"Error: no test specified\" && exit 1",
     "serve": "nodemon src_js/server/server.js"
@@ -23,6 +24,7 @@
     "cors": "^2.8.5",
     "express": "^4.17.1",
     "express-fileupload": "^1.2.1",
+    "file-metadata": "^2.0.0",
     "mongoose": "^6.0.7",
     "simple-node-logger": "^21.8.12",
     "swagger-ui-express": "^4.1.6",

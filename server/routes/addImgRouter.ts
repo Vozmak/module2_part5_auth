@@ -1,6 +1,6 @@
 import { Request, Response } from 'express';
-import { addImgGallery } from '../gallery/addImgGallery';
-import { errorMessage } from '../function/errorMessageCheck';
+import { addImgGallery } from '../gallery/addImgGallery.js';
+import { errorMessage } from '../functions/errorMessageCheck.js';
 import * as express from 'express';
 const router = express.Router();
 

@@ -1,6 +1,6 @@
 import { Request, Response } from 'express';
-import { login } from '../login/login';
-import { errorMessage } from '../function/errorMessageCheck';
+import { login } from '../login/login.js';
+import { errorMessage } from '../functions/errorMessageCheck.js';
 import * as express from 'express';
 
 const router = express.Router();
