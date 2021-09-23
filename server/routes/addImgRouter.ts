@@ -4,7 +4,7 @@ import { errorMessage } from '../functions/errorMessageCheck.js';
 import * as express from 'express';
 const router = express.Router();
 
-router.post('/gallery/:page', async (req: Request, res: Response) => {
+router.post('/gallery', async (req: Request, res: Response) => {
   const upload = await addImgGallery(req);
 
   errorMessage(res, upload, 400);

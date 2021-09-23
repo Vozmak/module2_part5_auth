@@ -1,10 +1,9 @@
+// @ts-ignore
+import { fileMetadataAsync } from 'file-metadata';
 import * as fs from 'fs';
-import * as path from 'path';
 import * as util from 'util';
 import { logger } from '../logger/logger.js';
 import { Images } from '../mongoDB/Models/Images.js';
-// @ts-ignore
-import { fileMetadataAsync } from 'file-metadata';
 
 interface Image {
   path: string;
@@ -21,30 +20,30 @@ async function addImagesToDb(host: string): Promise<void> {
 
     if (!resultFind) {
       await Images.create(pathImg);
-      logger(`Add ${pathImg.path} to db`)
+      logger(`Add ${pathImg.path} to db`);
     }
   }
 }
 
-async function getImagesInfoServer(host: string): Promise<Array<Image>> {
-  const total: number = (await readdir(`server/gallery/images`)).length;
+async function imageToDbCheck(imgPath: string): Promise<boolean> {
+  return Images.findOne({ path: imgPath });
+}
 
+async function getImagesInfoServer(host: string): Promise<Array<Image>> {
   let pathImages: Array<Image> = [];
-  for (let i = 1; i <= total; i++) {
-    const imagesDir: Array<string> = await readdir(`server/gallery/images/${i}`);
-    const imagesDirInfo = imagesDir.map( async img => {
-      const metadata = await fileMetadataAsync(`server/gallery/images/${i}/${img}`)
-        return {
-          path: path.join(host, `images/${i}`, img),
-          metadata: metadata,
-        }
-        }
-      );
-    const resolveImages = await Promise.all(imagesDirInfo);
-    pathImages.push(...resolveImages);
-  }
+  const imagesDir: Array<string> = await readdir(`server/gallery/images`);
+  const imagesDirInfo = imagesDir.map(async img => {
+      const metadata = await fileMetadataAsync(`server/gallery/images/${img}`);
+      return {
+        path: `${host}/images/${img}`,
+        metadata: metadata,
+      };
+    },
+  );
+  const resolveImages = await Promise.all(imagesDirInfo);
+  pathImages.push(...resolveImages);
 
   return pathImages;
 }
 
-export { addImagesToDb }
+export { addImagesToDb, imageToDbCheck };
