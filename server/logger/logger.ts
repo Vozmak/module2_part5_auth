@@ -1,8 +1,10 @@
 import {NextFunction, Request, Response} from "express";
-import * as log from 'simple-node-logger'
+import pkg from 'simple-node-logger';
 import {Logger} from "simple-node-logger";
 
-let logInfo: Logger = log.createRollingFileLogger({
+const { createRollingFileLogger } = pkg;
+
+let logInfo: Logger = createRollingFileLogger({
     errorEventName: 'error',
     logDirectory: 'server/logger',
     fileNamePattern: 'logFile-<DATE>.log',
@@ -10,9 +12,9 @@ let logInfo: Logger = log.createRollingFileLogger({
     timestampFormat: 'DD-MM-YYYY HH:mm:ss.SSS'
 });
 
-function logger(message: string): void;
-function logger(req: Request, res?: Response, next?: NextFunction): void;
-function logger(reqOrMsg: Request | string, res?: Response, next?: NextFunction): void {
+export function logger(message: string): void;
+export function logger(req: Request, res?: Response, next?: NextFunction): void;
+export function logger(reqOrMsg: Request | string, res?: Response, next?: NextFunction): void {
     if (typeof reqOrMsg === 'string') {
         logInfo.info(`Ответ сервера: ${reqOrMsg}`);
     } else {
@@ -26,5 +28,3 @@ function logger(reqOrMsg: Request | string, res?: Response, next?: NextFunction)
         next();
     }
 }
-
-export { logger }

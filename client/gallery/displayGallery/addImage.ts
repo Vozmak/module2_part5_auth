@@ -5,10 +5,7 @@ const imgForm = <HTMLFormElement>document.querySelector('.sendImg');
 imgForm.addEventListener('submit', async (event: Event) => {
     event.preventDefault();
 
-    const searchParams = new URL(window.location.href).searchParams;
-    const page: string = searchParams.get('page') || localStorage.page || '1';
-
-    const uploadImg: Response = await fetch(`http://127.0.0.1:2000/gallery/${page}`, {
+    const uploadImg: Response = await fetch(`http://127.0.0.1:2000/gallery`, {
         method: "POST",
         headers: {
             "Authorization": localStorage.token,

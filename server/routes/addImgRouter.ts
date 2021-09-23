@@ -1,10 +1,10 @@
 import { Request, Response } from 'express';
-import { addImgGallery } from '../gallery/addImgGallery';
-import { errorMessage } from '../function/errorMessageCheck';
+import { addImgGallery } from '../gallery/addImgGallery.js';
+import { errorMessage } from '../functions/errorMessageCheck.js';
 import * as express from 'express';
 const router = express.Router();
 
-router.post('/', async (req: Request, res: Response) => {
+router.post('/gallery', async (req: Request, res: Response) => {
   const upload = await addImgGallery(req);
 
   errorMessage(res, upload, 400);
