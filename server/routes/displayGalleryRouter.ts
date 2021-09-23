@@ -1,11 +1,11 @@
 import { Request, Response } from 'express';
-import { displayGallery } from '../gallery/displayGallery';
-import { errorMessage } from '../function/errorMessageCheck';
+import { displayGallery } from '../gallery/displayGallery.js';
+import { errorMessage } from '../functions/errorMessageCheck.js';
 import * as express from 'express';
 const router = express.Router();
 
-router.get('/', async (req: Request, res: Response) => {
-  let gallery = await displayGallery(req);
+router.get('/gallery/:page/:limit', async (req: Request, res: Response) => {
+  const gallery = await displayGallery(req);
 
   errorMessage(res, gallery, 404);
 

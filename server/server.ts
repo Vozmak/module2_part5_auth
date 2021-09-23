@@ -1,33 +1,51 @@
 import { NextFunction, Request, Response } from 'express';
-import * as express from 'express';
-import * as cors from 'cors';
+import express from 'express';
+import cors from 'cors';
 import * as swaggerUi from 'swagger-ui-express';
-import * as YAML from 'yamljs';
-import * as fileUpload from 'express-fileupload';
-import { logger } from './logger/logger';
-import { authorizationChecker } from './middleware/authorizationChecker';
-import loginRouter from './routes/loginRouter';
-import displayGalleryRouter from './routes/displayGalleryRouter';
-import addImgRouter from './routes/addImgRouter';
+import YAML from 'yamljs';
+import fileUpload from 'express-fileupload';
+import { logger } from './logger/logger.js';
+import { authorizationChecker } from './middleware/authorizationChecker.js';
+import loginRouter from './routes/loginRouter.js';
+import displayGalleryRouter from './routes/displayGalleryRouter.js';
+import addImgRouter from './routes/addImgRouter.js';
+import { connectDb } from './mongoDB/mongoDbConnect.js';
+import { addImagesToDb } from './functions/dbImagesCheck.js';
 
 const app = express();
 const PORT: number = 2000;
 const hostname: string = '127.0.0.1';
 const swaggerDocument = YAML.load(`server/swagger/swaggerAPI.yaml`);
 
+connectDb()
+  .then(() => {
+    console.log('Connection success.');
+    addImagesToDb(`http://${hostname}:${PORT}`)
+      .then(() => {
+        console.log('Images add to db');
+      })
+      .catch(e => {
+        console.log(e);
+      })
+  })
+  .catch(e => {
+    console.log(e);
+  });
+
 app.use(cors({
   origin: '*',
+  credentials: true,
 }));
 app.use(express.json());
 app.all('*', authorizationChecker);
 app.use(logger);
-app.use(express.static(`server/gallery/images`));
+app.use('/images', express.static(`server/gallery/images`));
 app.use(fileUpload());
 app.use('/api-docs', swaggerUi.serve, swaggerUi.setup(swaggerDocument));
 
-app.use('/authorization', loginRouter);
-app.use('/gallery/:page', displayGalleryRouter);
-app.use('/gallery/:page', addImgRouter);
+app.use('/', loginRouter);
+app.use('/', displayGalleryRouter);
+app.use('/', addImgRouter);
 
 app.all('*', (req: Request, res: Response, next: NextFunction) => {
   res.writeHead(404);

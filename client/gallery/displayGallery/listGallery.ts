@@ -38,9 +38,11 @@ next.onclick = function() {
 async function displayImgList(): Promise<void> {
   const gallery = document.querySelector(".gallery") as HTMLBodyElement
 
-  const page = getPage();
+  const searchParams = new URL(window.location.href).searchParams;
+  const page: number | string = getPage();
+  const limit = Number(searchParams.get('limit')) || localStorage.limit || '0';
 
-  const imgList: Response = await fetch(`http://127.0.0.1:2000/gallery/${page}`, {
+  const imgList: Response = await fetch(`http://127.0.0.1:2000/gallery/${page}/${limit}`, {
     method: 'GET',
     headers: {
       "Authorization": localStorage.token
@@ -62,7 +64,7 @@ async function displayImgList(): Promise<void> {
   const jsonImgList = await imgList.json();
   for (let img of jsonImgList.objects) {
     let newImg = document.createElement("img") as HTMLImageElement;
-    newImg.src = img;
+    newImg.src = new URL(img.path).toString();
     gallery.insertAdjacentElement("beforeend", newImg);
   }
 
@@ -70,15 +72,14 @@ async function displayImgList(): Promise<void> {
   const p = div.querySelector("p") as HTMLElement;
   p.textContent = `Страница ${page} из ${jsonImgList.total}`;
 
-  localStorage.setItem("page", page);
+  if (Number(page) === 1) previous.disabled = true
+  else if (Number(page) === jsonImgList.total) next.disabled = true
+
+  localStorage.setItem("page", page.toString());
+  localStorage.setItem('limit', limit);
 }
 
 function getPage(): string {
   const searchParams = new URL(window.location.href).searchParams;
-  let page: string = searchParams.get('page') || localStorage.page || '1';
-
-  if (page === "1") previous.disabled = true
-  else if (page === "3") next.disabled = true
-
-  return page;
+  return Number(searchParams.get('page')) || localStorage.page || 1;
 }

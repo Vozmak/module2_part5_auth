@@ -2,14 +2,17 @@
   "compilerOptions": {
     "watch": true,
     "strict": true,
-    "module": "commonjs",
+    "module": "ES2020",
     "target": "ES2021",
     "sourceMap": true,
-    "outDir": "src_js"
+    "outDir": "src_js",
+    "allowJs": true,
+    "moduleResolution": "Node",
+    "allowSyntheticDefaultImports": true
   },
   "include": [
     "client",
-    "server",
+    "server"
   ],
   "exclude": [
     "node_modules",

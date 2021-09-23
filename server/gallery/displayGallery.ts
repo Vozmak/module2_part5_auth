@@ -1,34 +1,38 @@
-import * as path from 'path';
-import * as fs from 'fs';
-import * as util from 'util';
 import {Request} from "express";
-
-const readdir = util.promisify(fs.readdir);
+import { Images } from '../mongoDB/Models/Images.js';
 
 type LoginResponse = {
   errorMessage: string;
 } | {
   objects: Array<string>;
-  page: string;
+  page: number;
   total: number;
 }
 
 async function displayGallery(req: Request): Promise<LoginResponse> {
-  const total: number = (await readdir(`server/gallery/images`)).length;
-  const page = <string>req.params.page || '1';
+  const { page = '1', limit = '0' } = req.params;
+  const numberPage: number = Number(page);
+  const numberLimit: number = Number(limit);
 
-  if (isNaN(Number(page)) || Number(page) > total || Number(page) < 1) {
+  const total: number = Math.ceil(await Images.count() / numberLimit);
+
+  if (numberPage > total || numberPage < 1) {
     return {
       errorMessage: 'Указаной страницы несуществует',
     };
   }
 
-  const imgArray = await readdir(`server/gallery/images/${page}`);
-  const images = imgArray.map((img: string) => path.join(`/server/gallery/images/${page}`, img));
+  const images = await Images.find({},
+    {
+      _id: false,
+      path: 1
+    }).lean()
+    .skip((numberPage - 1) * numberLimit)
+    .limit(Number(limit));
 
   return {
     objects: images,
-    page: page,
+    page: numberPage,
     total: total,
   };
 }
