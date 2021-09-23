@@ -3,10 +3,11 @@
   "version": "1.0.0",
   "description": "",
   "type": "module",
+  "module": "src_js/server",
   "main": "server/server",
   "scripts": {
     "test": "echo \"Error: no test specified\" && exit 1",
-    "serve": "nodemon src_js/server/server.js"
+    "serve": "nodemon build/server/server.js"
   },
   "author": "",
   "license": "ISC",

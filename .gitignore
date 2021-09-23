@@ -1,4 +1,4 @@
 .idea
 node_modules
-src_js
+build
 server/logger/*.log

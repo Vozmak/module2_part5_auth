@@ -9,6 +9,10 @@ type LoginResponse = {
   total: number;
 }
 
+interface Path {
+  path: string
+}
+
 async function displayGallery(req: Request): Promise<LoginResponse> {
   const { page = '1', limit = '0' } = req.params;
   const numberPage: number = Number(page);
@@ -22,13 +26,15 @@ async function displayGallery(req: Request): Promise<LoginResponse> {
     };
   }
 
-  const images = await Images.find({},
+  const pathImages: Array<Path> = await Images.find({},
     {
       _id: false,
       path: 1
     }).lean()
     .skip((numberPage - 1) * numberLimit)
     .limit(Number(limit));
+
+  const images = pathImages.map(img => img.path);
 
   return {
     objects: images,
