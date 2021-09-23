@@ -10,18 +10,27 @@ import loginRouter from './routes/loginRouter.js';
 import displayGalleryRouter from './routes/displayGalleryRouter.js';
 import addImgRouter from './routes/addImgRouter.js';
 import { connectDb } from './mongoDB/mongoDbConnect.js';
+import { addImagesToDb } from './functions/dbImagesCheck.js';
 
-connectDb()
-  .then(() => {
-    console.log('Connection success.');
-  })
-  .catch(e => {
-    console.log(e);
-  });
 const app = express();
 const PORT: number = 2000;
 const hostname: string = '127.0.0.1';
 const swaggerDocument = YAML.load(`server/swagger/swaggerAPI.yaml`);
+
+connectDb()
+  .then(() => {
+    console.log('Connection success.');
+    addImagesToDb(`http://${hostname}:${PORT}`)
+      .then(() => {
+        console.log('Images add to db');
+      })
+      .catch(e => {
+        console.log(e);
+      })
+  })
+  .catch(e => {
+    console.log(e);
+  });
 
 app.use(cors({
   origin: '*',
