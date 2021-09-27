@@ -10,7 +10,7 @@ import loginRouter from './routes/loginRouter.js';
 import displayGalleryRouter from './routes/displayGalleryRouter.js';
 import addImgRouter from './routes/addImgRouter.js';
 import { connectDb } from './database/mongoDbConnect.js';
-import { addImagesToDb } from './functions/dbImagesCheck.js';
+import { addImagesToDb } from './gallery/addImage/dbImagesCheck.js';
 import config from './config.json'
 
 const app = express();
