@@ -11,10 +11,11 @@ import displayGalleryRouter from './routes/displayGalleryRouter.js';
 import addImgRouter from './routes/addImgRouter.js';
 import { connectDb } from './database/mongoDbConnect.js';
 import { addImagesToDb } from './functions/dbImagesCheck.js';
+import config from './config.json'
 
 const app = express();
-const PORT: number = 2000;
-const hostname: string = '127.0.0.1';
+const PORT: number = config.PORT;
+const hostname: string = config.hostname;
 const swaggerDocument = YAML.load(`server/swagger/swaggerAPI.yaml`);
 
 connectDb()
