@@ -3,7 +3,7 @@ import { fileMetadataAsync } from 'file-metadata';
 import * as fs from 'fs';
 import * as util from 'util';
 import { logger } from '../logger/logger.js';
-import { Images } from '../mongoDB/Models/Images.js';
+import { Images } from '../database/Models/Images.js';
 
 interface Image {
   path: string;

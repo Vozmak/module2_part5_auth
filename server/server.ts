@@ -9,7 +9,7 @@ import { authorizationChecker } from './middleware/authorizationChecker.js';
 import loginRouter from './routes/loginRouter.js';
 import displayGalleryRouter from './routes/displayGalleryRouter.js';
 import addImgRouter from './routes/addImgRouter.js';
-import { connectDb } from './mongoDB/mongoDbConnect.js';
+import { connectDb } from './database/mongoDbConnect.js';
 import { addImagesToDb } from './functions/dbImagesCheck.js';
 
 const app = express();
