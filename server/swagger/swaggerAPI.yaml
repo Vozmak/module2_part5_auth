@@ -70,7 +70,7 @@ paths:
               errorMessage:
                 type: "string"
                 example: "Неверное имя пользователя или пароль"
-  /gallery/{page}:
+  /gallery/{page}/{limit}:
     get:
       tags:
         - gallery
@@ -92,6 +92,11 @@ paths:
           description: "Page gallery"
           type: "integer"
           format: "int64"
+        - name: "limit"
+          in: "path"
+          description: "Limit images"
+          type: "integer"
+          format: "int64"
       responses:
         "200":
           description: "successful operation"
@@ -109,6 +114,7 @@ paths:
                 example: "3"
         "404":
           description: "page not found"
+  /gallery:
     post:
       tags:
         - gallery
@@ -127,11 +133,6 @@ paths:
           schema:
             type: "string"
             example: "token"
-        - name: "page"
-          in: "path"
-          description: "Page gallery"
-          type: "integer"
-          format: "int64"
         - in: "formData"
           name: "photo"
           description: "FormData images"

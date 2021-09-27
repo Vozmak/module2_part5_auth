@@ -12,9 +12,9 @@ let logInfo: Logger = createRollingFileLogger({
     timestampFormat: 'DD-MM-YYYY HH:mm:ss.SSS'
 });
 
-export function logger(message: string): void;
-export function logger(req: Request, res?: Response, next?: NextFunction): void;
-export function logger(reqOrMsg: Request | string, res?: Response, next?: NextFunction): void {
+function logger(message: string): void;
+function logger(req: Request, res?: Response, next?: NextFunction): void;
+function logger(reqOrMsg: Request | string, res?: Response, next?: NextFunction): void {
     if (typeof reqOrMsg === 'string') {
         logInfo.info(`Ответ сервера: ${reqOrMsg}`);
     } else {
@@ -28,3 +28,5 @@ export function logger(reqOrMsg: Request | string, res?: Response, next?: NextFu
         next();
     }
 }
+
+export { logger }

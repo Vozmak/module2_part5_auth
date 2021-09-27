@@ -5,7 +5,7 @@
     "module": "ES2020",
     "target": "ES2021",
     "sourceMap": true,
-    "outDir": "src_js",
+    "outDir": "build",
     "allowJs": true,
     "moduleResolution": "Node",
     "allowSyntheticDefaultImports": true
@@ -16,6 +16,6 @@
   ],
   "exclude": [
     "node_modules",
-    "src_js"
+    "build"
   ]
 }
