@@ -33,7 +33,7 @@ async function getImagesInfoServer(host: string): Promise<Array<Image>> {
   let pathImages: Array<Image> = [];
   const imagesDir: Array<string> = await readdir(`server/gallery/images`);
   const imagesDirInfo = imagesDir.map(async img => {
-      const metadata = await fileMetadataAsync(`server/gallery/images/${img}`);
+      const metadata = await fileMetadataAsync(`server/gallery/images/${img}`); // metadata
       return {
         path: `${host}/images/${img}`,
         metadata: metadata,

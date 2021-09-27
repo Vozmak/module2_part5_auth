@@ -1,9 +1,6 @@
 import {Request} from 'express';
 import {FileArray, UploadedFile} from "express-fileupload";
 import { saveImages } from './saveImages.js';
-// @ts-ignore
-import { fileMetadataAsync } from 'file-metadata';
-
 
 async function addImgGallery(req: Request) {
     const formData: FileArray | undefined = req.files;
