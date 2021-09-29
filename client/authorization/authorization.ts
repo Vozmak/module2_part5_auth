@@ -21,6 +21,7 @@ const form = document.getElementById("authorization") as HTMLFormElement;
 form.addEventListener("submit", async event => {
   event.preventDefault()
 
+
   const email = form.elements.namedItem('email') as HTMLInputElement;
   const password = form.elements.namedItem('password') as HTMLInputElement;
   const user: User = {
@@ -54,7 +55,7 @@ form.addEventListener("submit", async event => {
 });
 
 async function authorizationUser(user: User): Promise<ErrorMsg | Token>  {
-  let response: Response = await fetch('http://127.0.0.1:2000/authorization', {
+  let response: Response = await fetch('http://127.0.0.1:2000/login', {
     method: "POST",
     headers: {
       "Content-type": "application/json"

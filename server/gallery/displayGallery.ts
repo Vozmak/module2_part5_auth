@@ -18,7 +18,7 @@ async function displayGallery(req: Request): Promise<LoginResponse> {
   const numberPage: number = Number(page);
   const numberLimit: number = Number(limit);
 
-  const total: number = Math.ceil(await Images.count() / numberLimit);
+  const total: number = Math.ceil(await Images.count() /  (numberLimit ? numberLimit : await Images.count()));
 
   if (numberPage > total || numberPage < 1) {
     return {

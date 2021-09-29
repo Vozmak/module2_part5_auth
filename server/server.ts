@@ -4,14 +4,18 @@ import cors from 'cors';
 import * as swaggerUi from 'swagger-ui-express';
 import YAML from 'yamljs';
 import fileUpload from 'express-fileupload';
+import bodyParser from "body-parser";
 import { logger } from './logger/logger.js';
-import { authorizationChecker } from './middleware/authorizationChecker.js';
 import loginRouter from './routes/loginRouter.js';
 import displayGalleryRouter from './routes/displayGalleryRouter.js';
 import addImgRouter from './routes/addImgRouter.js';
 import { connectDb } from './database/mongoDbConnect.js';
 import { addImagesToDb } from './gallery/addImage/dbImagesCheck.js';
 import config from './config.json'
+import passport from "passport";
+import profile from "./profile/profile.js";
+
+import('./middleware/auth.js');
 
 const app = express();
 const PORT: number = config.PORT;
@@ -37,16 +41,19 @@ app.use(cors({
   origin: '*',
   credentials: true,
 }));
-app.use(express.json());
-app.all('*', authorizationChecker);
+app.use(bodyParser.json());
+app.use(bodyParser.urlencoded({ extended: false }))
+app.use(passport.initialize());
+//app.all('*', authorizationChecker);
 app.use(logger);
 app.use('/images', express.static(`server/gallery/images`));
 app.use(fileUpload());
-app.use('/api-docs', swaggerUi.serve, swaggerUi.setup(swaggerDocument));
 
 app.use('/', loginRouter);
+app.use('/user', passport.authenticate('jwt', { session: false }), profile);
 app.use('/', displayGalleryRouter);
 app.use('/', addImgRouter);
+app.use('/api-docs', swaggerUi.serve, swaggerUi.setup(swaggerDocument));
 
 app.all('*', (req: Request, res: Response, next: NextFunction) => {
   res.writeHead(404);
