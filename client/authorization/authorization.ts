@@ -1,3 +1,5 @@
+import {getUser} from "../helpers/getUser.js";
+
 if (localStorage.timestamp < Date.now()) {
   localStorage.removeItem("token");
   localStorage.removeItem("timestamp");
@@ -21,28 +23,11 @@ const form = document.getElementById("authorization") as HTMLFormElement;
 form.addEventListener("submit", async event => {
   event.preventDefault()
 
+  const user: User = getUser(form);
 
-  const email = form.elements.namedItem('email') as HTMLInputElement;
-  const password = form.elements.namedItem('password') as HTMLInputElement;
-  const user: User = {
-    email: email.value,
-    password: password.value
-  };
+  const result: ErrorMsg | Token = await authorizationUser(user);
 
-  let result: ErrorMsg | Token = await authorizationUser(user);
-
-  if ('errorMessage' in result && result.errorMessage) {
-    email.value = "";
-    password.value = "";
-
-    const incorrect = document.querySelector(".incorrect") as HTMLElement;
-    incorrect.textContent = 'Некоректный ввод. Проверьте привильность email и пароля.';
-    setTimeout( () => {
-      incorrect.textContent = '';
-    }, 7000);
-
-    return alert(result.errorMessage)
-  }
+  if ('errorMessage' in result && result.errorMessage) return alert(result.errorMessage)
 
   const {token} = result as Token;
 

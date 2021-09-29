@@ -1,4 +1,4 @@
-// import { getPage } from './moduls/getPage';
+// import { getPage } from './helpers/getPage';
 
 if (!localStorage.token) window.location.href = '../index.html';
 
@@ -41,11 +41,12 @@ async function displayImgList(): Promise<void> {
   const searchParams = new URL(window.location.href).searchParams;
   const page: number | string = getPage();
   const limit = Number(searchParams.get('limit')) || localStorage.limit || '0';
+  const filter = searchParams.get('filter') || '0';
 
-  const imgList: Response = await fetch(`http://127.0.0.1:2000/gallery/${page}/${limit}`, {
+  const imgList: Response = await fetch(`http://127.0.0.1:2000/gallery/${page}/${limit}/${filter}`, {
     method: 'GET',
     headers: {
-      "Authorization": localStorage.token
+      Authorization: `Bearer ${localStorage.token}`
     }
   });
 

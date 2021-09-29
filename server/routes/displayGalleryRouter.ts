@@ -4,7 +4,7 @@ import { errorMessage } from '../functions/errorMessageCheck.js';
 import * as express from 'express';
 const router = express.Router();
 
-router.get('/gallery/:page/:limit', async (req: Request, res: Response) => {
+router.get('/gallery/:page/:limit/:filter', async (req: Request, res: Response) => {
   const gallery = await displayGallery(req);
 
   errorMessage(res, gallery, 404);

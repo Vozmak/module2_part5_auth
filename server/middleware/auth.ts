@@ -48,7 +48,7 @@ passport.use('login', new Strategy({
 
 passport.use(new JWTstrategy.Strategy({
     secretOrKey: 'TOP_SECRET',
-    jwtFromRequest: ExtractJwt.fromUrlQueryParameter('secret_token')
+    jwtFromRequest: ExtractJwt.fromAuthHeaderAsBearerToken()
 }, async (token, done: VerifiedCallback) => {
     try {
         return done(null, token.user);

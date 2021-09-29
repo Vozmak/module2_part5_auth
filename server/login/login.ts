@@ -1,20 +1,20 @@
 import { Request } from 'express';
-import { Users } from '../database/Models/Users.js';
 
-type LoginResponse = {
-  errorMessage: string;
-} | {
-  token: string
-}
 
 interface User {
   email: string;
   password: string;
 }
 
+type LoginResponse = {
+  errorMessage: string;
+} | {
+  message: string;
+  user: Express.User | undefined;
+}
+
 async function login(req: Request): Promise<LoginResponse> {
   const user: User = req.body;
-  const findUser: User = await Users.findOne(user);
 
   if (!userValidation(user)) {
     return {
@@ -22,14 +22,9 @@ async function login(req: Request): Promise<LoginResponse> {
     };
   }
 
-  if (!findUser) {
-    return {
-      errorMessage: 'Неверный логин или пароль',
-    };
-  }
-
   return {
-    token: 'token',
+    message: 'Успешная регистрация',
+    user: req.user
   };
 }
 

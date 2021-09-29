@@ -6,7 +6,7 @@
   <title>Галерея картинок</title>
 </head>
 <body>
-<form id="authorization">
+<form id="authorization" method="post">
   <label>
     Email:
     <input type="text" name="email" placeholder="Введите email" value="">
@@ -16,9 +16,10 @@
     <input type="text" name="password" placeholder="Введите пароль" value="">
   </label>
   <div class="incorrect"></div><br>
-  <input type="submit" value="Sign Up" name="signup">
-  <input type="submit" value="Login" name="login">
+  <input type="button" value="Sign Up" id="signup">
+  <input type="submit" value="Login" id="login">
 </form>
 <script type="module" src="../build/client/authorization/authorization.js"></script>
+<script type="module" src="../build/client/authorization/signUp.js"></script>
 </body>
 </html>

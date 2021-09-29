@@ -1,4 +1,4 @@
-// import { getPage } from './moduls/getPage';
+// import { getPage } from './helpers/getPage';
 
 const imgForm = <HTMLFormElement>document.querySelector('.sendImg');
 
@@ -8,7 +8,7 @@ imgForm.addEventListener('submit', async (event: Event) => {
     const uploadImg: Response = await fetch(`http://127.0.0.1:2000/gallery`, {
         method: "POST",
         headers: {
-            "Authorization": localStorage.token,
+            Authorization: `Bearer ${localStorage.token}`
         },
         body: new FormData(imgForm),
     })

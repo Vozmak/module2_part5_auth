@@ -13,7 +13,6 @@ import { connectDb } from './database/mongoDbConnect.js';
 import { addImagesToDb } from './gallery/addImage/dbImagesCheck.js';
 import config from './config.json'
 import passport from "passport";
-import profile from "./profile/profile.js";
 
 import('./middleware/auth.js');
 
@@ -46,13 +45,13 @@ app.use(bodyParser.urlencoded({ extended: false }))
 app.use(passport.initialize());
 //app.all('*', authorizationChecker);
 app.use(logger);
+app.use(express.static('../client'));
 app.use('/images', express.static(`server/gallery/images`));
 app.use(fileUpload());
 
 app.use('/', loginRouter);
-app.use('/user', passport.authenticate('jwt', { session: false }), profile);
-app.use('/', displayGalleryRouter);
-app.use('/', addImgRouter);
+app.use('/', passport.authenticate('jwt', { session: false }), displayGalleryRouter);
+app.use('/', passport.authenticate('jwt', { session: false }), addImgRouter);
 app.use('/api-docs', swaggerUi.serve, swaggerUi.setup(swaggerDocument));
 
 app.all('*', (req: Request, res: Response, next: NextFunction) => {
