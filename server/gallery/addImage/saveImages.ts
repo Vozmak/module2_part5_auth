@@ -7,10 +7,15 @@ import { imageToDbCheck } from './dbImagesCheck.js';
 // @ts-ignore
 import { fileMetadataAsync } from 'file-metadata';
 
+interface User {
+  [n: string]: any;
+}
+
 async function saveImages(imgData: UploadedFile, req: Request): Promise<void> {
   if (await imageToDbCheck(`http://${req.headers.host}/images/${imgData.name}`)) {
     return;
   }
+
   await fs.writeFile(`server/gallery/images/${imgData.name}`, imgData.data, (err: ErrnoException | null) => {
     if (err) {
       throw err
@@ -19,7 +24,8 @@ async function saveImages(imgData: UploadedFile, req: Request): Promise<void> {
 
   await Images.create({
     path: `http://${req.headers.host}/images/${imgData.name}`,
-    metadata: await fileMetadataAsync(`server/gallery/images/${imgData.name}`),
+    metadata: /*await fileMetadataAsync(`server/gallery/images/${imgData.name}`)*/{metadata: 'metadata'},
+    imgCreator: (req.user as User)?._id
   })
 
 }

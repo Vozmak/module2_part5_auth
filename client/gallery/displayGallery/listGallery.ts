@@ -40,8 +40,8 @@ async function displayImgList(): Promise<void> {
 
   const searchParams = new URL(window.location.href).searchParams;
   const page: number | string = getPage();
-  const limit = Number(searchParams.get('limit')) || localStorage.limit || '0';
-  const filter = searchParams.get('filter') || '0';
+  const limit: string = searchParams.get('limit') || localStorage.limit || '0';
+  const filter: string = searchParams.get('filter') || 'null';
 
   const imgList: Response = await fetch(`http://127.0.0.1:2000/gallery/${page}/${limit}/${filter}`, {
     method: 'GET',
@@ -76,8 +76,9 @@ async function displayImgList(): Promise<void> {
   if (Number(page) === 1) previous.disabled = true
   else if (Number(page) === jsonImgList.total) next.disabled = true
 
-  localStorage.setItem("page", page.toString());
+  localStorage.setItem('page', page.toString());
   localStorage.setItem('limit', limit);
+  localStorage.setItem('filter', filter);
 }
 
 function getPage(): string {
