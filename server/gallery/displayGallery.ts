@@ -39,9 +39,9 @@ async function displayGallery(req: Request): Promise<LoginResponse> {
       path: 1
     }).lean()
     .skip((numberPage - 1) * numberLimit)
-    .limit(Number(limit));
+    .limit(numberLimit);
 
-  const totalCount = pathImages.length;
+  const totalCount = await Images.count(findFilter);
   const total: number = Math.ceil(totalCount /  (numberLimit ? numberLimit : totalCount));
 
   if (pathImages.length === 0) {

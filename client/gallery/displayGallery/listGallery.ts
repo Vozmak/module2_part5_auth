@@ -9,7 +9,7 @@ if (localStorage.timestamp < Date.now()) {
   window.location.href = '../index.html';
 }
 
-const previous = document.querySelector('#previous') as HTMLButtonElement;
+const back = document.querySelector('#previous') as HTMLButtonElement;
 const next = document.querySelector('#next') as HTMLButtonElement;
 
 // displayImgList()
@@ -27,12 +27,12 @@ const next = document.querySelector('#next') as HTMLButtonElement;
   }
 })();
 
-previous.onclick = function() {
-  window.location.href = `gallery.html?page=${localStorage.page - 1}`
+back.onclick = function() {
+  window.location.href = `gallery.html?page=${localStorage.page - 1}&filter=${localStorage.filter}`
 };
 
 next.onclick = function() {
-  window.location.href = `gallery.html?page=${Number(localStorage.page) + 1}`
+  window.location.href = `gallery.html?page=${Number(localStorage.page) + 1}&filter=${localStorage.filter}`
 };
 
 async function displayImgList(): Promise<void> {
@@ -73,8 +73,12 @@ async function displayImgList(): Promise<void> {
   const p = div.querySelector("p") as HTMLElement;
   p.textContent = `Страница ${page} из ${jsonImgList.total}`;
 
-  if (Number(page) === 1) previous.disabled = true
-  else if (Number(page) === jsonImgList.total) next.disabled = true
+  if (Number(page) === 1 && jsonImgList.total === 1) {
+    back.disabled = true;
+    next.disabled = true;
+  }
+  else if (Number(page) === 1) back.disabled = true;
+  else if (Number(page) === jsonImgList.total) next.disabled = true;
 
   localStorage.setItem('page', page.toString());
   localStorage.setItem('limit', limit);
