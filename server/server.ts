@@ -49,10 +49,11 @@ app.use(express.static('../client'));
 app.use('/images', express.static(`server/gallery/images`));
 app.use(fileUpload());
 
+app.use('/api-docs', swaggerUi.serve, swaggerUi.setup(swaggerDocument));
+
 app.use('/', loginRouter);
 app.use('/', passport.authenticate('jwt', { session: false }), displayGalleryRouter);
 app.use('/', passport.authenticate('jwt', { session: false }), addImgRouter);
-app.use('/api-docs', swaggerUi.serve, swaggerUi.setup(swaggerDocument));
 
 app.all('*', (req: Request, res: Response, next: NextFunction) => {
   res.writeHead(404);
