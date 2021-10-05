@@ -7,15 +7,6 @@ import passport from "passport";
 
 const router = express.Router();
 
-router.post('/signup', passport.authenticate('signup', {session: false}), async (req: Request, res: Response) => {
-    // const resBody = await login(req);
-
-    res.end(JSON.stringify({
-        message: 'Успешная регистрация',
-        user: req.user
-    }));
-});
-
 router.post('/login', async (req: Request, res: Response, next: NextFunction) => {
     passport.authenticate('login', async (err, user, info) => {
         try {
