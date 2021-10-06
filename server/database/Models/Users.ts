@@ -5,7 +5,7 @@ interface User {
 
 import mongoose from 'mongoose';
 import bcrypt from 'bcrypt';
-import config from '../../config.json'
+import config from 'config'
 
 const UserScheme = new mongoose.Schema<User>({
   email: {
@@ -22,7 +22,7 @@ const UserScheme = new mongoose.Schema<User>({
 
 UserScheme.pre('save', async function (next) {
   const user = this;
-  this.password = await bcrypt.hash(this.password, config.saltRounds);
+  this.password = await bcrypt.hash(this.password, config.get('saltRounds'));
 
   next();
 });

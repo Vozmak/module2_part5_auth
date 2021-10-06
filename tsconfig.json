@@ -7,9 +7,9 @@
     "sourceMap": true,
     "outDir": "build",
     "allowJs": true,
-    "moduleResolution": "Node",
+    "moduleResolution": "node",
     "allowSyntheticDefaultImports": true,
-    "resolveJsonModule": true,
+    "esModuleInterop": true,
   },
   "include": [
     "client",

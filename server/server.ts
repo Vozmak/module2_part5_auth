@@ -14,13 +14,13 @@ import signUpRouter from "./routes/signUpRouter.js";
 import { connectDb } from './database/mongoDbConnect.js';
 import { addImagesToDb } from './gallery/addImage/dbImagesCheck.js';
 import { errorHandler } from "./middleware/errorHandler.js";
-import config from './config.json'
+import config from 'config'
 
 import('./middleware/auth.js');
 
 const app = express();
-const PORT: number = config.PORT;
-const hostname: string = config.hostname;
+const PORT: number = config.get('PORT');
+const hostname: string = config.get('hostname');
 const swaggerDocument = YAML.load(`server/swagger/swaggerAPI.yaml`);
 
 connectDb()
