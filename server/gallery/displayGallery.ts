@@ -5,13 +5,13 @@ import {Users} from "../database/Models/Users.js";
 type LoginResponse = {
   errorMessage: string;
 } | {
-  objects: Array<string>;
+  objects: Array<string | null>;
   page: number;
   total: number;
 }
 
 interface Path {
-  path: string
+  path: string | null;
 }
 
 async function displayGallery(req: Request): Promise<LoginResponse> {

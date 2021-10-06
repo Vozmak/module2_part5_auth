@@ -7,7 +7,7 @@
   "main": "server/server",
   "scripts": {
     "test": "echo \"Error: no test specified\" && exit 1",
-    "serve": "nodemon --experimental-json-modules build/server/server.js"
+    "serve": "nodemon build/server/server.js"
   },
   "author": "",
   "license": "ISC",
@@ -27,8 +27,10 @@
     "typescript": "^4.4.3"
   },
   "dependencies": {
+    "@types/config": "^0.0.39",
     "bcrypt": "^5.0.1",
     "body-parser": "^1.19.0",
+    "config": "^3.3.6",
     "cors": "^2.8.5",
     "express": "^4.17.1",
     "express-fileupload": "^1.2.1",
