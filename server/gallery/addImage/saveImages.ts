@@ -24,7 +24,7 @@ async function saveImages(imgData: UploadedFile, req: Request): Promise<void> {
 
   await Images.create({
     path: `http://${req.headers.host}/images/${imgData.name}`,
-    metadata: /*await fileMetadataAsync(`server/gallery/images/${imgData.name}`)*/{metadata: 'metadata'},
+    metadata: await fileMetadataAsync(`server/gallery/images/${imgData.name}`),
     imgCreator: (req.user as User)?._id
   })
 

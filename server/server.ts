@@ -26,13 +26,13 @@ const swaggerDocument = YAML.load(`server/swagger/swaggerAPI.yaml`);
 connectDb()
   .then(() => {
     console.log('Connection success.');
-    // addImagesToDb(`http://${hostname}:${PORT}`)
-    //   .then(() => {
-    //     console.log('Images add to db');
-    //   })
-    //   .catch(e => {
-    //     console.log(e);
-    //   })
+    addImagesToDb(`http://${hostname}:${PORT}`)
+      .then(() => {
+        console.log('Images add to db');
+      })
+      .catch(e => {
+        console.log(e);
+      })
   })
   .catch(e => {
     console.log(e);
